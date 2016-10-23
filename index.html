@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html manifest="webxoss.appcache">
+<!-- <html> -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>WEBXOSS | Beta</title>
+	<meta name="description" content="WEBXOSS is a free, no-ads, multilingual, cross-platform and full automated online Battle-Field for WIXOSS.">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<script>
+		var global = window;
+		if (window.location != window.parent.location) window.parent.location = window.location;
+	</script>
+	<link rel="stylesheet" type="text/css" href="./css.css" />
+</head>
+<body>
+	<div id="Hall">
+		<div id="Logo">WEBXOSS</div>
+		<div id="subtitle"><a id="link-support-webxoss" href="about.html#support" target="_blank"></a><a id="link-version" href="versions.txt" target="_blank">&lt;隐忍火蝶&gt;</a></div>
+		<div id="div-notice">
+			<span id="span-notice"></span>
+		</div>
+		<div id="div-online-counter">
+			<span id="span-set-proxy">设置代理</span><br><span id="label-online-counter">Online:</span> <span id="span-online-counter"></span><br>
+			<span id="label-latency">Latency:</span><span id="span-latency"></span>
+		</div>
+		<div id="div-hall-body">
+			<div id="div-nickname">
+				<span id="label-nickname">您的昵称:</span><input id="input-nickame" type="text" placeholder="昵称" maxlength="10"> <a id="link-edit-deck" href="./DeckEditor/">编辑卡组</a>
+			</div>
+			<div id="div-rooms">
+				<div style="position: relative;">
+					<div id="div-options">
+						<label><input id="checkbox-bgm" type="checkbox" class="checkbox"><span id="label-bgm">音乐</span></label>
+						<label><input id="checkbox-sound-effect" type="checkbox" class="checkbox" checked="checked"><span id="label-sound-effect">音效</span></label>
+						<select id="select-language">
+							<option value="en">English</option>
+							<option value="zh_CN">简体中文</option>
+							<option value="zh_TW">繁體中文</option>
+							<option value="jp">日本語</option>
+							<option value="ru">русский</option>
+							<option value="it">Italiano</option>
+						</select>
+					</div>
+					<span id="label-room-list">房间列表:</span>
+				</div>
+				<ol id="room-list"></ol>
+				<span id="span-play-replay">录像回放</span>
+			</div>
+			<div id="div-create-room">
+				<table id="table-create-room">
+					<tbody>
+						<tr>
+							<td><span id="label-create-room">创建房间:</span></td>
+							<td><input id="input-room-name" type="text" placeholder="房间名字" maxlength="15"></td>
+							<td><label><input id="checkbox-mayus-room" type="checkbox" class="checkbox" checked="checked"><span id="label-mayus-room">茧的房间</span></label></td>
+						</tr>
+						<tr>
+							<td><span id="label-create-room-password">房间密码:</span></td>
+							<td><input id="input-create-room-password" type="text" maxlength="15"></td>
+							<td><button id="button-create-room">创建</button></td>
+						</tr>
+					</tbody>
+				</table>
+<!-- 				<div>
+					<span id="label-create-room">创建房间:</span> <input id="input-room-name" type="text" placeholder="房间名字" maxlength="20"> <button id="button-password">密码</button> <button id="button-create-room">创建</button>
+				</div>
+				<div>
+					<span id="label-create-room-password">密码:</span> <input id="input-create-room-password" type="text" maxlength="15">
+				</div> -->
+			</div>
+		</div>
+		<div id="div-about">
+			<a id="link-copyright">©2015 WEBXOSS.COM</a><a id="link-about" href="about.html" target="_blank">关于我们</a><a id="link-service" href="service.html" target="_blank">服务条款</a><a id="link-disclaimer" href="service.html#disclaimer" target="_blank">免责声明</a><a id="link-supporters" href="supporters.html" target="_blank" style="color: #697;">捐赠者名单</a>
+		</div>
+	</div>
+	<div id="Room" style="display: none;"><div id="container-room">
+		<div>
+			<span id="span-leave-room">&lt;&lt;返回</span>
+		</div>
+		<div>
+			<label id="container-live"><input id="input-live" type="checkbox" checked><span id="label-live">直播</span></label>
+		</div>
+		<table id="table-room">
+			<tbody>
+					<tr>
+						<td colspan="100"><span id="room-name"></span></td>
+					</tr>
+					<tr>
+						<td><span id="room-host-nickname" class="nickname"></span></td>
+						<td rowspan="6" id="td-vs"><span>VS</span></td>
+						<td><span id="room-guest-nickname" class="nickname"></span></td>
+					</tr>
+					<tr>
+						<td><span id="host-spectator-0" class="nickname"></span></td>
+						<td><span id="guest-spectator-0" class="nickname"></span> <input type="checkbox" id="checkbox-spectator-0"></td>
+					</tr>
+					<tr>
+						<td><span id="host-spectator-1" class="nickname"></span></td>
+						<td><span id="guest-spectator-1" class="nickname"></span> <input type="checkbox" id="checkbox-spectator-1"></td>
+					</tr>
+					<tr>
+						<td><span id="host-spectator-2" class="nickname"></span></td>
+						<td><span id="guest-spectator-2" class="nickname"></span> <input type="checkbox" id="checkbox-spectator-2"></td>
+					</tr>
+					<tr>
+						<td><span id="host-spectator-3" class="nickname"></span></td>
+						<td><span id="guest-spectator-3" class="nickname"></span> <input type="checkbox" id="checkbox-spectator-3"></td>
+					</tr>
+					<tr>
+						<td><span id="host-spectator-4" class="nickname"></span></td>
+						<td><span id="guest-spectator-4" class="nickname"></span> <input type="checkbox" id="checkbox-spectator-4"></td>
+					</tr>
+					<tr>
+						<td colspan="100">
+							<select id="select-decks"></select> <button id="button-start-game">Oben!</button>
+							<label id="container-ready"><input id="input-ready" type="checkbox"><span id="label-ready">准备</span></label>
+						</td>
+					</tr>
+			</tbody>
+			<!-- <ul id="list-host-spectators"></ul> -->
+			<!-- <ul id="list-guest-spectators"></ul> -->
+		</table>
+	</div></div>
+	<div id="GameDiv" style="display: none;">
+		<div class="game-background" id="background-opponent"></div>
+		<div class="game-background" id="background-opponent-grid"></div>
+		<div class="game-background" id="background-self"></div>
+		<div class="game-background" id="background-self-grid"></div>
+		<div id="detail">
+			<div id="detail-card-figure">
+				<img id="detail-card-image">
+			</div>
+			<div id="detail-card-data">
+				<div id="detail-card-wxid"></div>
+				<div id="detail-card-name"></div>
+				<div id="detail-card-limiting"></div>
+				<table id="detail-table">
+					<tbody id="detail-table-body"></tbody>
+				</table>
+			</div>
+		</div>
+		<div id="BattleField">
+			<!-- <canvas id="BattleFieldCanvas" width="576" height="734"></canvas> -->
+		</div>
+		<div id="div-replay-controls" style="display: none;">
+			<button id="button-replay-step">下一步</button> <button id="button-replay-auto">自动播放</button>
+		</div>
+		<div id="div-surrender">
+			<span id="span-surrender">投降</span>
+			<span id="span-leave-game">离开</span>
+		</div>
+	</div>
+	<div id="Chat" style="display: none;">
+		<div id="chat-dialogue"></div>
+		<div id="chat-input-bar">
+			<input id="chat-input" type="text" placeholder="在此处聊天" maxlength="256">
+		</div>
+	</div>
+	<div id="msgbox-warp">
+		<div id="msgbox-window">
+			<div id="msgbox-head">
+				<span id="msgbox-title"></span>
+			</div>
+			<div id="msgbox-preset">
+				<div id="preset-replay">
+					<div>
+						<div id="label-replay-list">录像列表:</div>
+						<ol id="replay-list"></ol>
+					</div>
+					<div><span id="label-replay-file">录像文件:</span> <input id="input-replay-file" type="file" accept=".wxrep"></div>
+					<div id="div-replay-return"><button id="button-replay-return">返回</button></div>
+				</div>
+				<div id="preset-reconnect">
+					<div><span id="reconnect-title">连接已断开!</span></div>
+					<div class="waiting"><span id="reconnect-retry">正在重新连接...</span></div>
+				</div>
+				<div id="preset-wait-for-reconnect">
+					<div><span id="wait-for-reconnect-title">对手的连接已断开!</span></div>
+					<div class="waiting"><span id="wait-for-reconnect-retry">正在等待重新连接...</span></div>
+					<div id="wait-for-reconnect-foot"><button id="wait-for-reconnect-button-drop">放弃等待</button></div>
+				</div>
+				<div id="preset-proxy">
+					<div id="proxy-head"><span id="proxy-title">设置代理</span></div>
+					<div id="proxy-body"><span id="proxy-description">使用代理后,你与WEBXOSS服务器之间的数据将由代理服务器转发. 通常情况下,你不必设置代理,但如果掉线情况频繁发生,代理可能会有所帮助.</span></div>
+					<div id="proxy-foot">
+						<select id="select-proxy">
+							<option id="proxy-noproxy" value="">不使用代理</option>
+							<option id="proxy-cloudflare" value="cloudflare.webxoss.com">CloudFlare</option>
+							<option id="proxy-incapsula" value="incapsula.webxoss.com">Incapsula</option>
+							<option id="proxy-provide" value="provide">提供代理服务器...</option>
+						</select>
+						<button id="proxy-button-ok">确定</button>
+					</div>
+				</div>
+				<div id="preset-warn">
+					<div>
+						<span>
+							You are visiting this site from an untrusted domain.<br>
+							Please go to <a href="http://webxoss.com/">webxoss.com</a> instead.<br>
+							<br>
+							If you are the administrator of this domain,<br>
+							please contact us via webxoss@gmail.com
+						<span>
+					</div>
+				</div>
+			</div>
+			<div id="msgbox-body">
+				<div><span id="msgbox-msg"></span></div>
+				<div><input type="text" id="msgbox-input"></div>
+			</div>
+			<div id="msgbox-foot">
+				<div><button id="msgbox-button-ok">确定</button> <button id="msgbox-button-cancel">取消</button></div>
+			</div>
+		</div>
+	</div>
+	<audio id="audio-bgm" loop></audio>
+	<audio id="audio-sound-effect" autoplay></audio>
+
+	<script src="./lib/easeljs-0.8.2.min.js" defer="defer"></script>
+	<script src="./socket.io.min.js" defer="defer"></script>
+	<script src="./CardInfo.js" defer="defer"></script>
+	<script src="./CardInfo_ru.js" defer="defer"></script>
+
+	<script src="./Localize.min.js" defer="defer"></script>
+	<script src="./ImageAndDetail.min.js" defer="defer"></script>
+	<script src="./DeckEditor/Deck.min.js" defer="defer"></script>
+	<script src="./webxoss.js" defer="defer"></script>
+
+	<!-- <script src="./Localize.js" defer="defer"></script>
+	<script src="./ImageFileCache.js" defer="defer"></script>
+	<script src="./ImageManager.js" defer="defer"></script>
+	<script src="./Detail.js" defer="defer"></script>
+	<script src="./lib/util.js" defer="defer"></script>
+	<script src="./MessageBox.js" defer="defer"></script>
+	<script src="./IO.js" defer="defer"></script>
+	<script src="./Card.js" defer="defer"></script>
+	<script src="./CardBitmap.js" defer="defer"></script>
+	<script src="./StateBitmap.js" defer="defer"></script>
+	<script src="./Style.js" defer="defer"></script>
+	<script src="./Zone.js" defer="defer"></script>
+	<script src="./Game.js" defer="defer"></script>
+	<script src="./ZonePosition.js" defer="defer"></script>
+	<script src="./Button.js" defer="defer"></script>
+	<script src="./ButtonList.js" defer="defer"></script>
+	<script src="./Selector.js" defer="defer"></script>
+	<script src="./Dialog.js" defer="defer"></script>
+	<script src="./GameBackground.js" defer="defer"></script>
+	<script src="./FakeSocket.js" defer="defer"></script>
+	<script src="./ChatManager.js" defer="defer"></script>
+	<script src="./GameAudio.js" defer="defer"></script>
+	<script src="./DeckManager.js" defer="defer"></script>
+	<script src="./DeckEditor/Rules.js" defer="defer"></script>
+	<script src="./DeckEditor/Searcher.js" defer="defer"></script>
+	<script src="./RoomManager.js" defer="defer"></script> -->
+</body>
+</html>

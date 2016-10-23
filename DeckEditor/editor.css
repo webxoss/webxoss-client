@@ -1,0 +1,234 @@
+html {
+	margin: 0;
+	padding: 0;
+	/*font-family: 'Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;*/
+	font-family: 'Microsoft YaHei','WenQuanYi Zen Hei',sans-serif;
+	background-image: url('../background/bg.png');
+}
+body {
+	margin: 5px 5px 0;
+	padding: 0;
+	width: 1100px;
+}
+table, th, td {
+	border: 1px solid black;
+	padding: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+ol,ul,li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/*#Detail,#Deck,#Search {
+	min-height: 720px;
+}*/
+
+#div-search-results {
+	max-height: 600px;
+	overflow-y: auto;
+}
+
+#Detail {
+	float: left;
+	width: 260px;
+}
+
+#detail-card-figure {
+	height: 349px;
+}
+#detail-card-image {
+	border-radius: 4%;
+}
+#detail-card-data {
+	height: 340px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: relative;
+}
+#detail-card-wxid {
+	font-size: small;
+}
+#detail-card-name {
+	font-weight: bold;
+}
+#detail-card-name > a {
+	color: inherit;
+	text-decoration: none;
+}
+#detail-card-name > a:active {
+	color: red;
+}
+#detail-card-limiting {
+	position: absolute;
+	top: 0;
+	right: 0.5em;
+}
+#detail-table {
+	width: 100%;
+	white-space: pre-line;
+}
+#detail-table[lang="ru"] {
+	word-break: break-all;
+}
+
+#Deck {
+	position: relative;
+	float: left;
+	width: 620px;
+}
+
+#link-back-to-webxoss {
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	color: blue;
+	text-decoration: none;
+	/* font-size: small; */
+}
+
+#div-import-warp {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+#div-import-export {
+	position: absolute;
+	width: 500px;
+	top: 10%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	padding: 1em 2em;
+	background-color: white;
+	box-shadow: 0px 0px 38px rgba(0,0,0,0.7);
+}
+#textarea-import-export {
+	display: block;
+	width: 100%;
+	height: 15em;
+	box-sizing: border-box;
+	resize: vertical;
+}
+#div-import-footer {
+	text-align: center;
+	margin-top: 0.5em;
+}
+#div-import-footer > button {
+	margin-left: 0.5em;
+	/* margin-right: 0.5em; */
+}
+
+#select-decks,
+#input-new-deck-name {
+	width: 10em;
+	box-sizing: border-box;
+}
+
+#main-deck-text-bar,
+#lrig-deck-text-bar {
+	font-size: small;
+}
+
+#main-deck-burst {
+	float: right;
+}
+
+#main-deck-mayus-room {
+	display: none;
+	text-decoration: none;
+	margin-left: 1em;
+}
+#main-deck-mayus-room.invalid {
+	display: inline;
+}
+
+#main-deck-title,
+#lrig-deck-title {
+	color: green;
+	transition: color 0.5s,background-color 0.5s;
+}
+
+#main-deck-title.invalid,
+#lrig-deck-title.invalid,
+#main-deck-mayus-room.invalid {
+	color: red;
+	background-color: yellow;
+}
+
+#main-deck-title::before,
+#lrig-deck-title::before,
+#main-deck-mayus-room::before {
+	content: '\2714';
+}
+
+#main-deck-title.invalid::before,
+#lrig-deck-title.invalid::before,
+#main-deck-mayus-room.invalid::before  {
+	content: '\2718';
+}
+
+#main-deck-zone img,
+#lrig-deck-zone img {
+	position: absolute;
+	width: 62px;
+	height: 87px;
+	transition: left 0.3s, top 0.3s;
+	cursor: pointer;
+}
+
+#main-deck-zone {
+	position: relative;
+	width: 620px;
+	height: 435px;
+}
+
+#lrig-deck-zone {
+	position: relative;
+	width: 620px;
+	height: 174px;
+}
+
+#Search {
+	float: left;
+	width: 200px;
+	text-align: center;
+}
+
+#div-search-tips {
+	text-align: right;
+}
+#link-search-tips {
+	font-size: small;
+	color: inherit;
+	text-decoration: underline;
+}
+
+#search-input {
+	text-align: center;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#search-list li {
+	margin: 5px 0;
+}
+
+#search-list img {
+	width: 127px;
+	height: 176px;
+	cursor: pointer;
+}
+
+#search-show-more {
+	cursor: pointer;
+	color: blue;
+}

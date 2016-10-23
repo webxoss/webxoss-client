@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- <html> -->
+<html manifest="../webxoss.appcache">
+<head>
+<meta charset="UTF-8">
+<title>DeckEditor</title>
+<script>
+	global = window;
+</script>
+<script src="../CardInfo.js"></script>
+<script src="../CardInfo_ru.js"></script>
+<link rel="stylesheet" type="text/css" href="editor.css">
+</head>
+
+<body>
+	<section id="Detail">
+		<div id="detail-card-figure">
+			<img id="detail-card-image">
+		</div>
+		<div id="detail-card-data">
+			<div id="detail-card-wxid"></div>
+			<div id="detail-card-name"></div>
+			<div id="detail-card-limiting"></div>
+			<table id="detail-table">
+				<tbody id="detail-table-body"></tbody>
+			</table>
+		</div>
+	</section>
+	<section id="Deck">
+		<a id="link-back-to-webxoss" href="../">完成编辑</a>
+		<div id="div-deck">
+			<div>
+				<span id="label-select-deck">选择牌组:</span><select id="select-decks"></select><button id="button-delete-deck">删除</button><button id="button-rename">重命名</button>
+			</div>
+			<div id="div-new-deck">
+				<span id="label-new-deck">新建牌组:</span><input id="input-new-deck-name" type="text" placeholder="牌组名字"><button id="button-new-deck">新建</button><button id="button-copy-deck">复制</button><button id="button-import-export">导入/导出</button>
+			</div>
+		</div>
+		<div id="main-deck-text-bar">
+			<span id="main-deck-title">主卡组</span><a target="_blank" href="http://www.takaratomy.co.jp/products/wixoss/rule/rule_mayu_room.html" id="main-deck-mayus-room">茧的房间</a><span id="main-deck-burst"><span id="main-deck-burst-title">爆发:</span><span id="main-deck-burst-count"></span><span>/20</span></span>
+		</div>
+		<div id="main-deck-zone"></div>
+		<div id="lrig-deck-text-bar">
+			<span id="lrig-deck-title">LRIG卡组</span>
+		</div>
+		<div id="lrig-deck-zone"></div>
+		<div id="div-import-warp" style="display: none;">
+			<div id="div-import-export">
+				<div>
+					<span id="label-import-from-file">从文件导入:</span><input id="input-file" type="file">
+				</div>
+				<div>
+					<span id="label-export-to-file">导出到文件:</span><button id="button-export">导出</button>
+				</div>
+				<div>
+					<textarea id="textarea-import-export"></textarea>
+				</div>
+				<div id="div-import-footer">
+					<button id="button-text">显示文本</button><button id="button-export-code">显示代码</button><button id="button-import-code">导入代码</button><button id="button-import-export-cancel">取消</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="Search">
+		<input id="search-input" placeholder="输入关键字以搜索" spellcheck="false" autocomplete="off" autocapitalize="none">
+		<div id="div-search-tips">
+			<a id="link-search-tips" href="./SearchTips.html" target="_blank">搜索技巧</a>
+		</div>
+		<div id="div-search-results">
+			<ol id="search-list"></ol>
+			<div id="search-show-more" style="display: none;">显示更多</div>
+		</div>
+	</section>
+
+	<script src="../Localize.min.js"></script>
+	<script src="../ImageAndDetail.min.js"></script>
+	<script src="./Deck.min.js"></script>
+	<script src="./DeckEditor.js"></script>
+
+	<!-- <script src="../lib/util.js"></script>
+	<script src="../Localize.js"></script>
+	<script src="../ImageFileCache.js"></script>
+	<script src="../ImageManager.js"></script>
+	<script src="../Detail.js"></script>
+	<script src="../DeckManager.js"></script>
+	<script src="./Rules.js"></script>
+	<script src="./Searcher.js"></script>
+	<script src="./editor.js"></script> -->
+</body>
+</html>

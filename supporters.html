@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>捐赠者名单</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+body, html {
+	font-family: 'Microsoft YaHei','WenQuanYi Zen Hei',sans-serif;
+	font-size: 16px;
+	background-color: #212731;
+	color: white;
+}
+#main {
+	min-width: 25em;
+	max-width: 36em;
+	margin: auto;
+}
+h1 {
+	text-align: center;
+}
+details {
+	margin: 1em 0;
+}
+table {
+	width: 100%;
+}
+table,td,th {
+	font-weight: bold;
+	text-align: center;
+	border-collapse: collapse;
+	border: 1px solid #7a98c0;
+}
+thead {
+	background-color: #042d58;
+}
+#head-nickname {
+	min-width: 6em;
+}
+#head-amount {
+	min-width: 4em;
+}
+.saying {
+	text-align: left;
+}
+td {
+	padding: 0.2em;
+}
+tbody > tr:nth-child(5n+1) {
+	color: #fbf9d2; /* 弧光白 */
+}
+tbody > tr:nth-child(5n+2) {
+	color: #77d25b; /* 大器绿 */
+}
+tbody > tr:nth-child(5n+3) {
+	color: #f2442b; /* 割裂红 */
+}
+tbody > tr:nth-child(5n+4) {
+	color: #6c9af8; /* 除灰蓝 */
+}
+tbody > tr:nth-child(5n+5) {
+	color: #a460de; /* 飞溅黑 */
+}
+.white {
+	color: white !important;
+}
+.italic {
+	font-style: italic;
+}
+#support {
+	text-align: right;
+}
+#a-support {
+	color: #8594AD;
+	text-decoration: none;
+}
+a {
+	color: inherit;
+	text-decoration: underline;
+}
+@media (max-width: 450px) {
+	html,body {
+		font-size: 14px;
+		padding: 0;
+		margin: 2px;
+	}
+}
+</style>
+</head>
+
+<body>
+	<div id="main">
+		<h1>捐赠者名单</h1>
+		<p>感谢以下选择者对WEBXOSS的慷慨捐赠!</p>
+		<details open>
+			<summary>2016年04月</summary>
+			<table>
+				<thead>
+					<tr>
+						<th id="head-nickname">昵称</th>
+						<th id="head-amount">金额</th>
+						<th id="head-saying">想说的话</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>笨蛋</td>
+						<td>60 CNY</td>
+						<td class="saying">四月第一个，希望WEBXOSS能一直坚持下去（收买洗牌姬）</td>
+					</tr>
+					<tr>
+						<td>tama♦amat</td>
+						<td>20 CNY</td>
+						<td class="saying">关捐款之前再捐一次</td>
+					</tr>
+					<tr>
+						<td>死亡皮萨罗</td>
+						<td>20 CNY</td>
+						<td class="saying">扑克是我细佬</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="support">
+				<a id="a-support" href="about.html#support" target="_blank">成为捐赠者</a>
+			</div>
+		</details>
+		<details open>
+			<summary>2016年03月</summary>
+			<table>
+				<thead>
+					<tr>
+						<th id="head-nickname">昵称</th>
+						<th id="head-amount">金额</th>
+						<th id="head-saying">想说的话</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>传说中的鱼</td>
+						<td>50 CNY</td>
+						<td class="saying">微薄之力，希望WEB能一直更新下去</td>
+					</tr>
+					<tr>
+						<td class="italic">未取得联系</td>
+						<td>20 CNY</td>
+						<td class="saying">-</td>
+					</tr>
+					<tr>
+						<td>Vanby</td>
+						<td>4 CNY</td>
+						<td class="saying">加油，哈哈</td>
+					</tr>
+					<tr>
+						<td class="italic">未取得联系</td>
+						<td>10 CNY</td>
+						<td class="saying">-</td>
+					</tr>
+					<tr>
+						<td>tama♦amat</td>
+						<td>10 USD</td>
+						<td class="saying">请继续坚持下去</td>
+					</tr>
+					<tr>
+						<td class="italic">未取得联系</td>
+						<td>15 CNY</td>
+						<td class="saying">-</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="support">
+				<a id="a-support" href="about.html#support" target="_blank">成为捐赠者</a>
+			</div>
+		</details>
+		<details>
+			<summary>2016年02月</summary>
+			<table>
+				<thead>
+					<tr>
+						<th id="head-nickname">昵称</th>
+						<th id="head-amount">金额</th>
+						<th id="head-saying">想说的话</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="italic">未取得联系</td>
+						<td>20 CNY</td>
+						<td class="saying">-</td>
+					</tr>
+					<tr>
+						<td>抹布p</td>
+						<td>20 CNY</td>
+						<td class="saying">我给你们讲，药水制作师好玩。</td>
+					</tr>
+					<tr>
+						<td>ピルルクが気持ち悪い</td>
+						<td>10 USD</td>
+						<td class="saying">期待第十一弹~</td>
+					</tr>
+					<tr>
+						<td>bunlion</td>
+						<td>300 CNY</td>
+						<td class="saying">新年快乐！想不到有什么卡组的时候，大家喝一瓶草莓药水吧。（暗地里是买抱枕的）</td>
+					</tr>
+					<tr>
+						<td>粽子</td>
+						<td>30 CNY</td>
+						<td class="saying">团子加油w</td>
+					</tr>
+					<tr>
+						<td>冰绿</td>
+						<td>20 CNY</td>
+						<td class="saying">团子加油！</td>
+					</tr>
+					<tr>
+						<td>可愛的ZX128</td>
+						<td>13 CNY</td>
+						<td class="saying">雖然什麼忙都幫不了，但是希望web做的越來越好ヽ(；▽；)ノ</td>
+					</tr>
+					<tr>
+						<td class="italic">未取得联系</td>
+						<td>10 CNY</td>
+						<td class="saying">-</td>
+					</tr>
+					<tr>
+						<td>威严</td>
+						<td>50 CNY</td>
+						<td class="saying">我们中出一个叛徒 （顺便祝大家新年快乐）</td>
+					</tr>
+					<tr>
+						<td>扑克</td>
+						<td>10 CNY</td>
+						<td class="saying">无锡老聪今天炉石了吗</td>
+					</tr>
+					<tr>
+						<td class="italic">未取得联系</td>
+						<td>7 CNY</td>
+						<td class="saying">-</td>
+					</tr>
+					<tr>
+						<td>izzab</td>
+						<td>8 CNY</td>
+						<td class="saying">-</td>
+					</tr>
+					<tr>
+						<td>鬼鬼</td>
+						<td>10 CNY</td>
+						<td class="saying">webxoss的鬼鬼前来助阵</td>
+					</tr>
+					<tr>
+						<td class="italic">未取得联系</td>
+						<td>50 CNY</td>
+						<td class="saying">越办越好</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="support">
+				<a id="a-support" href="about.html#support" target="_blank">成为捐赠者</a>
+			</div>
+		</details>
+		<details>
+			<summary>2016年01月</summary>
+			<table>
+				<thead>
+					<tr>
+						<th id="head-nickname">昵称</th>
+						<th id="head-amount">金额</th>
+						<th id="head-saying">想说的话</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>布偶</td>
+						<td>100 CNY</td>
+						<td class="saying">webxoss做得越来越好！<br>我要组出更多的恶心tama~！</td>
+					</tr>
+					<tr>
+						<td>Kenny</td>
+						<td>10 USD</td>
+						<td class="saying">I am very happy that u added wx09, now i can decide which card to use before i buy :D, Thanks</td>
+					</tr>
+					<tr>
+						<td>进爷</td>
+						<td>20 CNY</td>
+						<td class="saying">感谢一直以来的默默努力，希望能越做越好</td>
+					</tr>
+					<tr>
+						<td>pile_fan</td>
+						<td>20 CNY</td>
+						<td class="saying">团子！我要用pio侍从！(ง •̀_•́)ง</td>
+					</tr>
+					<tr>
+						<td>ry</td>
+						<td>100 CNY</td>
+						<td class="saying">S·W·T唯一神</td>
+					</tr>
+					<tr>
+						<td>tamaamat</td>
+						<td>5 USD</td>
+						<td class="saying">-</td>
+					</tr>
+					<tr>
+						<td class="italic">未取得联系</td>
+						<td>10 CNY</td>
+						<td class="saying">-</td>
+					</tr>
+					<tr>
+						<td>tamaamat</td>
+						<td>5 USD</td>
+						<td class="saying">这是我第二次捐钱，因为这个平台真的很好用尤其是我这种搞到卡片比较困难的。真心希望webxoss能做下去，让更多人更轻易的接触到wixoss这款游戏。也希望大家多给它捐钱，好的东西需要财力来维持。</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="support">
+				<a id="a-support" href="about.html#support" target="_blank">成为捐赠者</a>
+			</div>
+		</details>
+		<details>
+			<summary>2015年12月</summary>
+			<table>
+				<thead>
+					<tr>
+						<th id="head-nickname">昵称</th>
+						<th id="head-amount">金额</th>
+						<th id="head-saying">想说的话</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="italic">未取得联系</td>
+						<td>50 CNY</td>
+						<td class="saying">考研加油(ง •̀_•́)ง</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="support">
+				<a id="a-support" href="about.html#support" target="_blank">成为捐赠者</a>
+			</div>
+		</details>
+		<details>
+			<summary>2015年11月</summary>
+			<table>
+				<thead>
+					<tr>
+						<th id="head-nickname">昵称</th>
+						<th id="head-amount">金额</th>
+						<th id="head-saying">想说的话</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="italic">未取得联系</td>
+						<td>20 CNY</td>
+						<td class="saying">-</td>
+					</tr>
+					<tr>
+						<td>袋鼠剃毛专家</td>
+						<td>10 CNY</td>
+						<td class="saying">谢谢组织让我的小飞侠和死亡接着死亡第一回合超高上手率，希望洗牌姬继续帮我做牌</td>
+					</tr>
+					<tr>
+						<td>水蒺藜伙伴</td>
+						<td>10 CNY</td>
+						<td class="saying">希望能降低ulith第一回合小飞侠和死接死的同时上手率（雾</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="support">
+				<a id="a-support" href="about.html#support" target="_blank">成为捐赠者</a>
+			</div>
+		</details>
+		<details>
+			<summary>2015年10月</summary>
+			<table>
+				<thead>
+					<tr>
+						<th id="head-nickname">昵称</th>
+						<th id="head-amount">金额</th>
+						<th id="head-saying">想说的话</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="italic">未取得联系</td>
+						<td>50 CNY</td>
+						<td class="saying">感谢WEBXOSS！</td>
+					</tr>
+					<tr>
+						<td>梦限烧酒</td>
+						<td>10 CNY</td>
+						<td class="saying">刚入坑的新人，希望webxoss可以一直走下去。</td>
+					</tr>
+					<tr>
+						<td>Tymeos</td>
+						<td>10 USD</td>
+						<td class="saying">Thanks for supporting this game</td>
+					</tr>
+					<tr>
+						<td>船</td>
+						<td>42 CNY</td>
+						<td class="saying">团子请继续做下去！</td>
+					</tr>
+					<tr>
+						<td>白猫</td>
+						<td>100 CNY</td>
+						<td class="saying">WEBXOSS加油！fight哒哟！</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="support">
+				<a id="a-support" href="about.html#support" target="_blank">成为捐赠者</a>
+			</div>
+		</details>
+		<details>
+			<summary>2015年09月</summary>
+			<table>
+				<thead>
+					<tr>
+						<th id="head-nickname">昵称</th>
+						<th id="head-amount">金额</th>
+						<th id="head-saying">想说的话</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>今泉影狼</td>
+						<td>50 CNY</td>
+						<td class="saying">祝webxoss越办越好，钱很少希望心意能到</td>
+					</tr>
+					<tr>
+						<td>游人</td>
+						<td>100 CNY</td>
+						<td class="saying">WEBXOSS加油！fight哒哟！</td>
+					</tr>
+					<tr>
+						<td>非洲白</td>
+						<td>51 CNY</td>
+						<td class="saying">团子加油webxoss加油~数额不多但心意在~</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="support">
+				<a id="a-support" href="about.html#support" target="_blank">成为捐赠者</a>
+			</div>
+		</details>
+		<details>
+			<summary>2015年08月</summary>
+			<table>
+				<thead>
+					<tr>
+						<th id="head-nickname">昵称</th>
+						<th id="head-amount">金额</th>
+						<th id="head-saying">想说的话</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Mashuu</td>
+						<td>5 USD</td>
+						<td class="saying">I myself am a new player, as the cards are all in Japanese, this platform is the best to help me understand my own deck and the opponents. Thank you!</td>
+					</tr>
+					<tr>
+						<td>WX TC PIM</td>
+						<td>5 USD</td>
+						<td class="saying">support the service u use nearly everyday…</td>
+					</tr>
+					<tr>
+						<td>solitia</td>
+						<td>20 CNY</td>
+						<td class="saying">感谢网战工具问世！希望WEBXOSS越做越好咯！</td>
+					</tr>
+					<tr>
+						<td>selector天</td>
+						<td>99 CNY</td>
+						<td class="saying">支持webxoss，欢迎大家加入wixoss的大家庭，团子也加油w</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="support">
+				<a id="a-support" href="about.html#support" target="_blank">成为捐赠者</a>
+			</div>
+		</details>
+		<details>
+			<summary>2015年07月</summary>
+			<table>
+				<thead>
+					<tr>
+						<th id="head-nickname">昵称</th>
+						<th id="head-amount">金额</th>
+						<th id="head-saying">想说的话</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>evation2008</td>
+						<td>100 CNY</td>
+						<td class="saying">希望WEBXOSS越做越好</td>
+					</tr>
+					<tr>
+						<td class="italic">匿名</td>
+						<td>20 CNY</td>
+						<td class="saying">WEBXOSS加油！</td>
+					</tr>
+					<tr>
+						<td class="italic">匿名</td>
+						<td>50 CNY</td>
+						<td class="saying">有录像功能了！可惜可贺！WEBXOSS加油！</td>
+					</tr>
+					<tr>
+						<td class="italic">匿名</td>
+						<td>20 CNY</td>
+						<td class="saying">每个月老司机都来加油下</td>
+					</tr>
+					<tr>
+						<td>雪米</td>
+						<td>10 CNY</td>
+						<td class="saying">希望WEBXOSS越办越成功</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="support">
+				<a id="a-support" href="about.html#support" target="_blank">成为捐赠者</a>
+			</div>
+		</details>
+		<details>
+			<summary>2015年06月</summary>
+			<table>
+				<thead>
+					<tr>
+						<th id="head-nickname">昵称</th>
+						<th id="head-amount">金额</th>
+						<th id="head-saying">想说的话</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>WX TC PIM</td>
+						<td>5 USD</td>
+						<td class="saying">people at WX TCG PIM, srsly... u should get PP acc…</td>
+					</tr>
+					<tr>
+						<td>Bad End</td>
+						<td>20 CNY</td>
+						<td class="saying">感谢团子！webxoss赛高！</td>
+					</tr>
+					<tr>
+						<td>hanabusa</td>
+						<td>5 USD</td>
+						<td class="saying">Nice job!</td>
+					</tr>
+					<tr>
+						<td>大龙</td>
+						<td>10 CNY</td>
+						<td class="saying">加油！永远支持webxoss！</td>
+					</tr>
+					<tr>
+						<td class="italic">非洲白</td>
+						<td>10 CNY</td>
+						<td class="saying">WEBXOSS加油！祝wixoss新人越来越多~</td>
+					</tr>
+					<tr>
+						<td class="italic">未取得联系</td>
+						<td>5 CNY</td>
+						<td class="saying">支持WEBXOSS！</td>
+					</tr>
+					<tr>
+						<td class="italic">匿名</td>
+						<td>20 CNY</td>
+						<td class="saying">老司机再次给web加油啦！</td>
+					</tr>
+					<tr>
+						<td class="italic">未取得联系</td>
+						<td>10 CNY</td>
+						<td class="saying">支持webxoss！以后还会继续捐的！</td>
+					</tr>
+					<tr>
+						<td class="italic">未取得联系</td>
+						<td>50 CNY</td>
+						<td class="saying">非常感谢制作WEBXOSS！</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="support">
+				<a id="a-support" href="about.html#support" target="_blank">成为捐赠者</a>
+			</div>
+		</details>
+		<details>
+			<summary>2015年05月</summary>
+			<table>
+				<thead>
+					<tr>
+						<th id="head-nickname">昵称</th>
+						<th id="head-amount">金额</th>
+						<th id="head-saying">想说的话</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>ashia</td>
+						<td>50 CNY</td>
+						<td class="saying">希望WEBXOSS越办越好！</td>
+					</tr>
+					<tr>
+						<td class="italic">未取得联系</td>
+						<td>3 EUR</td>
+						<td class="saying">Keep the good work, thx!</td>
+					</tr>
+					<tr>
+						<td class="italic">匿名</td>
+						<td>20 CNY</td>
+						<td class="saying">感谢团子！</td>
+					</tr>
+					<tr>
+						<td>扑街</td>
+						<td>50 CNY</td>
+						<td class="saying">webxoss越来越好哟！</td>
+					</tr>
+					<tr>
+						<td>Fujiwara</td>
+						<td>5 USD</td>
+						<td class="saying">Please consider supporting WEBXOSS as well!<br>WIXOSS is a really fun game that should be more accessible!<br>If you enjoy it, please buy physically as well!</td>
+					</tr>
+					<tr>
+						<td>白月</td>
+						<td>10 CNY</td>
+						<td class="saying">白月大法好，退红保平安！<br>人在做，天在看，大器晚成留祸患，该隐一出天地灭，早日入教保平安！<br>诚心诚念皮神好，白月大法平安保！</td>
+					</tr>
+					<tr>
+						<td class="italic">匿名</td>
+						<td>50 CNY</td>
+						<td class="saying">加油，老司机为wixoss加油！</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="support">
+				<a id="a-support" href="about.html#support" target="_blank">成为捐赠者</a>
+			</div>
+		</details>
+		<details>
+			<summary>2015年04月</summary>
+			<table>
+				<thead>
+					<tr>
+						<th id="head-nickname">昵称</th>
+						<th id="head-amount">金额</th>
+						<th id="head-saying">想说的话</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>魔都老司机</td>
+						<td>100 CNY</td>
+						<td class="saying">欢迎魔都地区WIXOSS的爱好者加入QQ群418437933，里面有很多帅锅美女！</td>
+					</tr>
+					<tr>
+						<td>Mr.Nanbu</td>
+						<td>5 CAD</td>
+						<td class="saying">Battle Spirits 也很好玩的哦！！ 有兴趣可来<a href="https://www.facebook.com/groups/286780211360550/ " target="_blank">FaceBook</a> 一起讨论 ^^  <br>本人在找加拿大温哥华wixoss玩家，可以联络我: gavinandsanjeev@gmail.com</td>
+					</tr>
+					<tr>
+						<td>天子</td>
+						<td>25 CNY</td>
+						<td class="saying">webx太棒了，谢谢团子</td>
+					</tr>
+					<tr>
+						<td>喵的饭团</td>
+						<td>10 CNY</td>
+						<td class="saying">咱希望WIXOSS这个实现愿望的游戏能一直继续下去，欢迎各位玩家关注WIXOSS交易吧，WIXOSS交易群，群号码：194868169，祝愿各位セレクター收到自己喜爱的卡牌！El Psy Congroo</td>
+					</tr>
+					<tr>
+						<td>爱你的游人</td>
+						<td>18 CNY</td>
+						<td class="saying">希望web版越做越好</td>
+					</tr>
+					<tr>
+						<td>马修√</td>
+						<td>25.5 CNY</td>
+						<td class="saying">希望大家多多支持wixoss和webxoss，也请团子加油继续写出更多的（bug）内容（并不<br>顺便习习是xx，xx的内容大家请自行补全~（逃走</td>
+					</tr>
+					<tr>
+						<td>Bad End</td>
+						<td>12 CNY</td>
+						<td class="saying">WEBXOSS加油！fight哒哟！</td>
+					</tr>
+					<tr>
+						<td>selector天</td>
+						<td>99 CNY</td>
+						<td class="saying">愿webxoss和wixoss与大家同在！嗷呜~</td>
+					</tr>
+					<tr>
+						<td>苌门有K</td>
+						<td>57 CNY</td>
+						<td class="saying">还有57天，高三党一起加油！</td>
+					</tr>
+					<tr>
+						<td>傲·天</td>
+						<td>188 CNY</td>
+						<td class="saying">希望更多人加入wixoss的大家庭，也希望webxoss越做越好，同时，锦州魔法师之塔欢迎各位梦限少年/少女的加入，群号码：296012682</td>
+					</tr>
+					<tr>
+						<td>咸鱼ry</td>
+						<td>50 CNY</td>
+						<td class="saying">prprprrk</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="support">
+				<a id="a-support" href="about.html#support" target="_blank">成为捐赠者</a>
+			</div>
+		</details>
+	</div>
+</body>
+</html>

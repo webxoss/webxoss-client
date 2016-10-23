@@ -1,0 +1,47 @@
+CACHE MANIFEST
+
+CACHE:
+# main #
+lib/easeljs-0.8.2.min.js
+socket.io.min.js
+Localize.min.js
+ImageAndDetail.min.js
+webxoss.js
+css.css
+CardInfo.js
+CardInfo_ru.js
+
+# DeckEditor #
+DeckEditor/
+DeckEditor/Deck.min.js
+DeckEditor/DeckEditor.js
+DeckEditor/editor.css
+
+# images #
+background/bg.png
+background/Grid.webp
+background/white.jpg
+background/whiteGrid.jpg
+background/black.jpg
+background/blackGrid.jpg
+background/red.jpg
+background/redGrid.jpg
+background/blue.jpg
+background/blueGrid.jpg
+background/green.jpg
+background/greenGrid.jpg
+images/WIXOSS_BLACK.jpg
+images/WIXOSS_WHITE.jpg
+images/noimage.jpg
+background/frozen.png
+background/charm.png
+background/lancer.png
+background/doubleCrash.png
+background/locked.png
+background/assassin.png
+background/loading.gif
+
+NETWORK:
+*
+
+# 2016/08/15 23:21:38

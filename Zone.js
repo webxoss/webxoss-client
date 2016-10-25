@@ -59,8 +59,11 @@ Zone.prototype.getCardIndex = function (card) {
 };
 Zone.prototype.updateCardPosition = function () {};
 Zone.prototype.update = function () {
-	if (this.showAmount && (this._amount !== this.cards.length)) {
-		this._amount = this.cards.length;
+	var len = this.cards.filter(function (card) {
+		return !card.isSide;
+	},this).length;
+	if (this.showAmount && (this._amount !== len)) {
+		this._amount = len;
 		var txt = (this._amount === 0)? '' : this._amount;
 		this.setText(txt);
 	}

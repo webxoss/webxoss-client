@@ -12,6 +12,7 @@ function Card (game,isWhiteBack) {
 	this.zone = null;
 	this.zIndex = 0;
 	this.changed = true;
+	this.isSide = false; // 双面共鸣, isSide 为 true 时,不计入区域卡片数量,不显示动画.
 
 	// 渲染层
 	// 因为EasleJS没有位置偏移(translate),
@@ -96,8 +97,9 @@ Card.prototype.facedown = function () {
 	this.style.transit('scaleX',-1,0.2);
 };
 
-Card.prototype.move = function (pid,zone,up,faceup,bottom) {
+Card.prototype.move = function (pid,zone,up,faceup,bottom,isSide) {
 	this.pid = pid;
+	this.isSide = isSide;
 	this.floatdown();
 
 	if (this.zone) this.zone.removeCard(this);
@@ -109,14 +111,15 @@ Card.prototype.move = function (pid,zone,up,faceup,bottom) {
 };
 
 Card.prototype.moveTo = function (x,y,coveredMoving,coveredSettaled) {
-	this.style.transit('x',x,0.2);
-	this.style.transit('y',y,0.2);
+	var duration = this.isSide? 0 : 0.2;
+	this.style.transit('x',x,duration);
+	this.style.transit('y',y,duration);
 	if (x !== this.x || y !== this.y) {
 		this.style.set('top',true);
-		this.style.transit('top',false,0.2);
+		this.style.transit('top',false,duration);
 	}
 	this.style.set('covered',coveredMoving);
-	this.style.transit('covered',coveredSettaled,0.2);
+	this.style.transit('covered',coveredSettaled,duration);
 };
 
 Card.prototype.floatup = function () {

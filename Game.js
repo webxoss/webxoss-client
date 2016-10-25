@@ -118,7 +118,8 @@ Game.prototype.handleInit = function (msg) {
 		zones.lrigDeckCards.forEach(function (sid,i) {
 			var card = new Card(this,true);
 			this.setSid(card,sid);
-			card.move(zones.lrigDeckCardIds[i],player.lrigDeck,true,false,false);
+			var info = zones.lrigDeckCardInfos[i];
+			card.move(info.pid,player.lrigDeck,true,false,false,info.isSide);
 		},this);
 	}
 
@@ -163,7 +164,7 @@ Game.prototype.handlePackedMsgEnd = function () {
 Game.prototype.handleMoveCard = function (msg) {
 	var card = this.getObjBySid(msg.card);
 	var zone = this.getObjBySid(msg.zone);
-	card.move(msg.pid,zone,msg.up,msg.faceup,msg.bottom);
+	card.move(msg.pid,zone,msg.up,msg.faceup,msg.bottom,msg.isSide);
 	return false;
 };
 

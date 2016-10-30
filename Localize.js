@@ -218,7 +218,7 @@ var map_zh_CN = {
 				textContent: 'WEBXOSS需要您的帮助!',
 				href: 'about.html#support'
 			},
-			'link-version': '<隐忍火蝶>',
+			'link-version': '<枯树生华>',
 			'label-nickname': '您的昵称:',
 			'input-nickame': {
 				placeholder: '昵称'
@@ -576,7 +576,7 @@ var map_en = {
 				textContent: 'WEBXOSS NEEDS YOUR HELP!',
 				href: 'about_en.html#support'
 			},
-			'link-version': '<Patience and Fiery Butterflies>',
+			'link-version': '<Withered Tree, Living Flower>',
 			'label-nickname': 'Nickname:',
 			'input-nickame': {
 				placeholder: 'nickname'
@@ -949,7 +949,7 @@ var map_jp = {
 				textContent: 'WEBXOSS NEEDS YOUR HELP!',
 				href: 'about_en.html#support'
 			},
-			'link-version': '<隠忍火蝶>',
+			'link-version': '<枯樹生華>',
 			// 'label-nickname': 'あなたのニックネーム:',
 			'label-nickname': 'ニックネーム:',
 			'input-nickame': {
@@ -1315,7 +1315,7 @@ var map_ru = {
 				textContent: 'WEBXOSS НУЖДАЕТСЯ В ПОМОЩИ!',
 				href: 'supporters_en.html'
 			},
-			'link-version': '<Patience and Fiery Butterflies>',
+			'link-version': '<Withered Tree, Living Flower>',
 			'label-nickname': 'Никнейм:',
 			'input-nickame': {
 				placeholder: 'никнейм'
@@ -1673,7 +1673,7 @@ var map_it = {
 				textContent: 'WEBXOSS HA BISOGNO DEL TUO AIUTO!',
 				href: 'about_en.html#support'
 			},
-			'link-version': '<Patience and Fiery Butterflies>',
+			'link-version': '<Withered Tree, Living Flower>',
 			'label-nickname': 'Nickname:',
 			'input-nickame': {
 				placeholder: 'nickname'

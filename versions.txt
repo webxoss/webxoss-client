@@ -1,7 +1,7 @@
 Cards:
-	Newly Added: WD15, WD16 and PR cards before WX13.
+	Newly Added: WX13 && PR cards.
 	Pre-built Deck: WD01~WD16
-	Booster Packs: WX01~WX12
+	Booster Packs: WX01~WX13
 	PR Cards:
 		001-120
 		123-148
@@ -18,15 +18,19 @@ Cards:
 		224
 		232-233
 		237-238
-		240-265
-		269-275
+		240-266
+		268-275
 		277-278
-		281-286
+		281-294
 		297-304
+		306
 	SP Cards: SP01~SP03, SP06~SP07, SP10, SP16
-	Total: 1665 cards
+	Total: 1778 cards
 
 Versions:
+<枯树生华> (2016-10-31)
+  + Add cards: WX13 && PR cards.
+
 <隐忍火蝶> (2016-08-15)
   + Add cards: WD15, WD16 and PR cards before WX13.
 

@@ -1684,7 +1684,7 @@ var map_it = {
 			'label-room-list': 'Stanze:',
 			'span-play-replay': 'Guarda Replay',
 			'label-create-room-password': 'Password:',
-			'label-mayus-room': '繭の部屋',
+			'label-mayus-room': 'Stanza di mayu',
 			'label-create-room': 'Crea Stanza:',
 			'input-room-name': {
 				placeholder: 'room name'
@@ -1752,7 +1752,7 @@ var map_it = {
 			'button-copy-deck': 'Duplica',
 			'button-import-export': 'Importa/Esporta',
 			'main-deck-title': 'Main Deck',
-			'main-deck-mayus-room': 'Mayu\'s Room',
+			'main-deck-mayus-room': 'Stanza di mayu',
 			'main-deck-burst-title': 'Burst: ',
 			'lrig-deck-title': 'LRIG Deck',
 			'label-import-from-file': 'Importa file:',

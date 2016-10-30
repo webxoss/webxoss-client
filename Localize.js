@@ -23,6 +23,7 @@ var map_zh_CN = {
 		'CROSS_NAME_QUOTE_RIGHT': '》',
 		'CROSS_LEFT': '【CROSS】%s的左侧',
 		'CROSS_RIGHT': '【CROSS】%s的右侧',
+		'CROSS_AND': '【CROSS】%s的左侧 和 %s的右侧',
 		'CROSS_OR': '或',
 		'GUARD_DESCRIPTION': '【防御】（从手牌舍弃此牌，将分身的1次攻击无效化）',
 		'MULTI_ENER_DESCRIPTION': '【常】：【万花色】（支付费用时，这张牌视为持有所有颜色）'
@@ -380,6 +381,7 @@ var map_en = {
 		'CROSS_NAME_QUOTE_RIGHT': '"',
 		'CROSS_LEFT': '>Cross< %s Left',
 		'CROSS_RIGHT': '>Cross< %s Right',
+		'CROSS_AND': '>Cross< %s Right and %s Left',
 		'CROSS_OR': ' or ',
 		'GUARD_DESCRIPTION': '[Guard] (By discarding this card from your hand, disable one of a LRIG\'s attacks)',
 		'MULTI_ENER_DESCRIPTION': '[Constant]: [Multi Ener] (When you pay a cost, treat this card as if it has all colors)'
@@ -737,6 +739,7 @@ var map_jp = {
 		'CROSS_NAME_QUOTE_RIGHT': '》',
 		'CROSS_LEFT': '【クロス】%sの左',
 		'CROSS_RIGHT': '【クロス】%sの右',
+		'CROSS_AND': '【クロス】%sの左 かつ %sの右',
 		'CROSS_OR': 'か',
 		'GUARD_DESCRIPTION': '【ガード】（このカードを手札から捨てることで、ルリグの攻撃を一度無効にする）',
 		'MULTI_ENER_DESCRIPTION': '【常時能力】：【マルチエナ】（コストを支払う際に、このカードは全ての色を持つかのように扱う）'
@@ -1115,6 +1118,7 @@ var map_ru = {
 		'CROSS_NAME_QUOTE_RIGHT': '"',
 		'CROSS_LEFT': '>Связь< слева от %s',
 		'CROSS_RIGHT': '>Связь< справа от %s',
+		'CROSS_AND': '>Cross< %s Right and %s Left',
 		'CROSS_OR': ' или ',
 		// 'CROSS_LEFT': '>Связь< слева от "%s"',
 		// 'CROSS_RIGHT': '>Связь< справа от "%s"',
@@ -1474,6 +1478,7 @@ var map_it = {
 		'CROSS_NAME_QUOTE_RIGHT': '"',
 		'CROSS_LEFT': '>Cross< %s Sinistra',
 		'CROSS_RIGHT': '>Cross< %s Destra',
+		'CROSS_AND': '>Cross< %s Right and %s Left',
 		'CROSS_OR': ' o ',
 		'GUARD_DESCRIPTION': '[Guard] (Scartando questa carta dalla tua mano annulla un attacco di una LRIG)',
 		'MULTI_ENER_DESCRIPTION': '[Constant]: [Multi Ener] (Mentre paghi un costo tratta questa carta come se fosse di un qualsiasi colore)'
@@ -1999,16 +2004,19 @@ Localize.effectTexts = function (info) {
 		texts.push(Localize('_misc','MULTI_ENER_DESCRIPTION'));
 	}
 	// CROSS
-	var cross = info.crossLeft || info.crossRight || [];
-	var names = [].concat(cross).map(function (cid) {
-		return Localize('_misc','CROSS_NAME_QUOTE_LEFT') +
-		       Localize.cardName(CardInfo[cid]) +
-		       Localize('_misc','CROSS_NAME_QUOTE_RIGHT');
-	}).join(Localize('_misc','CROSS_OR'));
-	if (info.crossLeft) {
-		texts.push(Localize('_misc','CROSS_LEFT',names));
+	function toNames (cross) {
+		return [].concat(cross).map(function (cid) {
+			return Localize('_misc','CROSS_NAME_QUOTE_LEFT') +
+			       Localize.cardName(CardInfo[cid]) +
+			       Localize('_misc','CROSS_NAME_QUOTE_RIGHT');
+		}).join(Localize('_misc','CROSS_OR'));
+	}
+	if (info.crossLeft && info.crossRight) {
+		texts.push(Localize('_misc','CROSS_AND',toNames(info.crossLeft),toNames(info.crossRight)));
+	} else if (info.crossLeft) {
+		texts.push(Localize('_misc','CROSS_LEFT',toNames(info.crossLeft)));
 	} else if (info.crossRight) {
-		texts.push(Localize('_misc','CROSS_RIGHT',names));
+		texts.push(Localize('_misc','CROSS_RIGHT',toNames(info.crossRight)));
 	}
 	// 魔法技艺
 	[Localize.suffix('spellEffectTexts'),Localize.suffix('artsEffectTexts')].forEach(function (prop) {

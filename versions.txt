@@ -30,6 +30,7 @@ Cards:
 Versions:
 <枯树生华> (2016-10-31)
   + Add cards: WX13 && PR cards.
+  + Add new proxy server: HongKong.
 
 <隐忍火蝶> (2016-08-15)
   + Add cards: WD15, WD16 and PR cards before WX13.

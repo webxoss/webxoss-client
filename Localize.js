@@ -214,10 +214,10 @@ var map_zh_CN = {
 	},
 	DOM: {
 		'index': {
-			'link-support-webxoss': {
-				textContent: 'WEBXOSS需要您的帮助!',
-				href: 'about.html#support'
-			},
+			// 'link-support-webxoss': {
+			// 	textContent: 'WEBXOSS需要您的帮助!',
+			// 	href: 'about.html#support'
+			// },
 			'link-version': '<枯树生华>',
 			'label-nickname': '您的昵称:',
 			'input-nickame': {
@@ -572,10 +572,10 @@ var map_en = {
 	},
 	DOM: {
 		'index': {
-			'link-support-webxoss': {
-				textContent: 'WEBXOSS NEEDS YOUR HELP!',
-				href: 'about_en.html#support'
-			},
+			// 'link-support-webxoss': {
+			// 	textContent: 'WEBXOSS NEEDS YOUR HELP!',
+			// 	href: 'about_en.html#support'
+			// },
 			'link-version': '<Withered Tree, Living Flower>',
 			'label-nickname': 'Nickname:',
 			'input-nickame': {
@@ -945,10 +945,10 @@ var map_jp = {
 	},
 	DOM: {
 		'index': {
-			'link-support-webxoss': {
-				textContent: 'WEBXOSS NEEDS YOUR HELP!',
-				href: 'about_en.html#support'
-			},
+			// 'link-support-webxoss': {
+			// 	textContent: 'WEBXOSS NEEDS YOUR HELP!',
+			// 	href: 'about_en.html#support'
+			// },
 			'link-version': '<枯樹生華>',
 			// 'label-nickname': 'あなたのニックネーム:',
 			'label-nickname': 'ニックネーム:',
@@ -1311,10 +1311,10 @@ var map_ru = {
 	},
 	DOM: {
 		'index': {
-			'link-support-webxoss': {
-				textContent: 'WEBXOSS НУЖДАЕТСЯ В ПОМОЩИ!',
-				href: 'supporters_en.html'
-			},
+			// 'link-support-webxoss': {
+			// 	textContent: 'WEBXOSS НУЖДАЕТСЯ В ПОМОЩИ!',
+			// 	href: 'supporters_en.html'
+			// },
 			'link-version': '<Withered Tree, Living Flower>',
 			'label-nickname': 'Никнейм:',
 			'input-nickame': {
@@ -1669,10 +1669,10 @@ var map_it = {
 	},
 	DOM: {
 		'index': {
-			'link-support-webxoss': {
-				textContent: 'WEBXOSS HA BISOGNO DEL TUO AIUTO!',
-				href: 'about_en.html#support'
-			},
+			// 'link-support-webxoss': {
+			// 	textContent: 'WEBXOSS HA BISOGNO DEL TUO AIUTO!',
+			// 	href: 'about_en.html#support'
+			// },
 			'link-version': '<Withered Tree, Living Flower>',
 			'label-nickname': 'Nickname:',
 			'input-nickame': {

@@ -34,6 +34,18 @@ ol,ul,li {
 	font-size: small;
 	/*cursor: pointer;*/
 }
+#link-helper-wanted {
+	display: none;
+}
+#subtitle.helper-wanted #link-helper-wanted {
+	display: block;
+	font-weight: bold;
+	color: blue !important;
+	cursor: pointer;
+}
+#subtitle.helper-wanted #link-version {
+	display: none;
+}
 /*#notice-match {
 	display: none;
 }
@@ -129,6 +141,7 @@ ol,ul,li {
 #msgbox-window {
 	position: relative;
 	min-width: 200px;
+	max-width: 800px;
 	display: inline-block;
 	top: 10%;
 	left: 0;

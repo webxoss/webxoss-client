@@ -10,6 +10,7 @@ webxoss.js
 css.css
 CardInfo.js
 CardInfo_ru.js
+CardInfo_ko.js
 
 # DeckEditor #
 DeckEditor/
@@ -44,4 +45,4 @@ background/loading.gif
 NETWORK:
 *
 
-# 2016/11/05 18:26
+# 2016/11/18 18:03

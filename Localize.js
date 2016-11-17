@@ -218,7 +218,7 @@ var map_zh_CN = {
 			// 	textContent: 'WEBXOSS需要您的帮助!',
 			// 	href: 'about.html#support'
 			// },
-			'link-version': '<枯树生华>',
+			'link-version': '<技艺代号 †S·C†>',
 			'label-nickname': '您的昵称:',
 			'input-nickame': {
 				placeholder: '昵称'
@@ -576,7 +576,7 @@ var map_en = {
 			// 	textContent: 'WEBXOSS NEEDS YOUR HELP!',
 			// 	href: 'about_en.html#support'
 			// },
-			'link-version': '<Withered Tree, Living Flower>',
+			'link-version': '<Code Art †SC†>',
 			'label-nickname': 'Nickname:',
 			'input-nickame': {
 				placeholder: 'nickname'
@@ -949,7 +949,7 @@ var map_jp = {
 			// 	textContent: 'WEBXOSS NEEDS YOUR HELP!',
 			// 	href: 'about_en.html#support'
 			// },
-			'link-version': '<枯樹生華>',
+			'link-version': '<コードアート　†Ｓ・Ｃ†>',
 			// 'label-nickname': 'あなたのニックネーム:',
 			'label-nickname': 'ニックネーム:',
 			'input-nickame': {
@@ -1315,7 +1315,7 @@ var map_ru = {
 			// 	textContent: 'WEBXOSS НУЖДАЕТСЯ В ПОМОЩИ!',
 			// 	href: 'supporters_en.html'
 			// },
-			'link-version': '<Withered Tree, Living Flower>',
+			'link-version': '<Code Art †SC†>',
 			'label-nickname': 'Никнейм:',
 			'input-nickame': {
 				placeholder: 'никнейм'
@@ -1673,7 +1673,7 @@ var map_it = {
 			// 	textContent: 'WEBXOSS HA BISOGNO DEL TUO AIUTO!',
 			// 	href: 'about_en.html#support'
 			// },
-			'link-version': '<Withered Tree, Living Flower>',
+			'link-version': '<Code Art †SC†>',
 			'label-nickname': 'Nickname:',
 			'input-nickame': {
 				placeholder: 'nickname'
@@ -1814,6 +1814,386 @@ var map_it = {
 	}
 };
 
+var map_ko = {
+  suffix: '_ko',
+  common: {
+    'OK': '확인',
+    'CANCEL': '캔슬',
+    'NO_CARDS': '카드가 없습니다'
+  },
+  _misc: {
+    'DIALOG_TITLE_EFFECTS': '복수의 효과가 동시에 발동되었습니다.\n먼저 처리할 효과를 하나 골라주세요',
+    // 'NO_TARGET': '목표가 없습니다',
+    'NO_OPTIONS': '%s할 수 없습니다',
+    // 'GIVE_UP_TARGET': '고를 수 없습니다',
+    'GIVE_UP': '%s하지 않는다',
+    'GUARD_TRUE': '있음',
+    'GUARD_FALSE': '-',
+    'LIMITING': '%s 한정',
+    'WAIT': '대전 상대가 생각중',
+    'CLASS_SEPARATOR': ':',
+    'CROSS_NAME_QUOTE_LEFT': '《',
+    'CROSS_NAME_QUOTE_RIGHT': '》',
+    'CROSS_LEFT': '[크로스]%s의 왼쪽',
+    'CROSS_RIGHT': '[크로스]%s의 오른쪽',
+    'CROSS_AND': '[크로스]%s의 왼쪽과  %s의 오른쪽',
+    'CROSS_OR': '또는',
+    'GUARD_DESCRIPTION': '[가드]（이 카드를 패에서 버리는 것으로, 루리그의 공격을 한 번 무효로 한다.）',
+    'MULTI_ENER_DESCRIPTION': '[상시]：[멀티에나]（코스트를 지불할 때, 이 카드는 모든 색을 가진것 처럼 취급한다.）'
+  },
+  'buttonTitle': {
+    'OK': '확인',
+    'CANCEL': '캔슬',
+    'LEVEL0_LRIG': '루리그 셋',
+    'DISCARD_AND_REDRAW': '다시 뽑기',
+    'CHARGE': '차지',
+    'GROW': '그로우',
+    'SUMMON_SIGNI': '장에 내기',
+    'SUMMON_SIGNI_ZONE': '시그니 존',
+    'BANISH': '배니시',
+    'BOUNCE': '패로 되돌리기',
+    // 'TRASH': 'トラッシュに置く',
+    'TRASH': '트래시',
+    // 'TRASH_SIGNI': 'トラッシュに置く',
+    'TRASH_SIGNI': '트래시',
+    'USE_SPELL': '사용',
+    'SPELL_EFFECT': '효과를 선택',
+    'USE_ARTS': '아츠를 사용',
+    'ARTS_EFFECT': '효과를 선택',
+    // 'SPELL_CUT_IN': 'スペルカットイン',
+    'SPELL_CUT_IN': '컷 인',
+    'USE_ACTION_EFFECT': '기동',
+    'SEEK': '찾기',
+    'SET_ORDER': '순서를 배치',
+    'SIGNI_ATTACK': '어택',
+    'LRIG_ATTACK': '어택',
+    'GUARD': '가드',
+    'DISCARD': '버리기',
+    'DECLARE': '선언',
+    'PAY': '지불',
+    'PAY_EXCEED': '엑시드',
+    'DOWN': '다운',
+    'UP': '업',
+    'TARGET': '목표',
+    'PAY_ENER': '에나를 지불',
+    'LAUNCH': '발동',
+    'EFFECTS': '먼저 처리',
+    'CONFIRM': '확인',
+    'END_SELECT': '선택을 완료',
+    'END_ENER_PHASE': '에나 페이즈 종료',
+    'END_GROW_PHASE': '그로우 페이즈 종료',
+    'END_MAIN_PHASE': '메인 페이즈 종료',
+    'END_ARTS_STEP': '아츠 스텝 종료',
+    // 'END_SIGNI_ATTACK_STEP': 'シグニアタックステップ終了',
+    'END_SIGNI_ATTACK_STEP': '스텝 종료',
+    // 'END_LRIG_ATTACK_STEP': 'ルリグアタックステップ終了',
+    'END_LRIG_ATTACK_STEP': '스텝 종료',
+    'VIEW': '본다',
+    'ADD_TO_HAND': '패에 더하기',
+    'COLOR': '색',
+    'CHOOSE_EFFECT': '효과 선택',
+    'CHOOSE_ZONE': '존 선택',
+    'RESET_SIGNI_ZONE': '배치',
+    'CHARM_CARD': '참',
+    'TRASH_CHARM': '참을 트래시',
+    'REVEAL': '공개',
+    'PUT_TO_TOP': '위에 두기',
+    'PUT_TO_BOTTOM': '아래에 두기',
+    'REVEAL_MORE': '카드를 더 공개',
+    'PROTECT': '보호',
+    '_SHIRONAKUJI': '-6000',
+    'CLASS': '클래스',
+    'PAY_WHITE_INSTEAD': '대신 [백]을 지불',
+    'TRASH_OSAKI': '오사키',
+    'RESONA': '레조나',
+    'CRASH': '크래시',
+    'PLAYER': '플레이어',
+    'PUT_TO_CHECK_ZONE': '체크 존에 두기',
+    'PUT_TO_ENER_ZONE': '에나 존에 두기',
+    'CONFIRM_REFRESH_SELF': '리프레시\n당신의 트래시를 확인',
+    'CONFIRM_REFRESH_OPPONENT': '리프레시\n상대의 트래시를 확인'
+  },
+  'noOptions': {
+    // 'SPELL_CUT_IN': 'カットインできません',
+    // 'GUARD': 'ガードできません',
+    // '発動できません': '発動できません',
+    'TARGET': '목표가 없습니다'
+
+  },
+  'giveUp': {
+    // 'SPELL_CUT_IN': 'カットインしない',
+    // 'GUARD': 'ガードしない',
+    // 'TARGET': '選択しない',
+    // 'LAUNCH': '発動しない',
+    // 'EFFECTS': '処理しない',
+    'TARGET': '선택하지 않는다',
+    'SUMMON_SIGNI_ZONE': '캔슬',
+    'DISCARD_AND_REDRAW': '다시 뽑지 않는다',
+    'SEEK': '찾지 않는다'
+  },
+  'gameText': {
+    'white': '백',
+    'black': '흑',
+    'red': '적',
+    'blue': '청',
+    'green': '녹',
+    'colorless': '무',
+    'ADD_TO_HAND': '패에 더한다',
+    'SUMMON': '장에 낸다',
+    'DOWN': '다운',
+    'UP': '업',
+    'SHOW_EFFECTS_DIALOG_TITLE': '효과',
+    'PUT_TO_TOP': '위에 둔다',
+    'PUT_TO_BOTTOM': '아래에 둔다',
+    'SELF': '당신',
+    'OPPONENT': '대전 상대',
+    'PUT_TO_ENER_ZONE': '에나 존에 둔다',
+    'CONFIRM_ENCORE': '앵콜을 사용합니까?',
+    'MAIN_DECK': '덱',
+    'LIFE_CLOTH': '라이프 클로스',
+    'SELECT_DONE': '선택 완료'
+  },
+  'prop': {
+    'cardType': '종류',
+    'classes': '타입',
+    'level': '레벨',
+    'color': '색',
+    'limit': '리미트',
+    'power': '파워',
+    'limting': '한정조건',
+    'guard': '가드',
+    'cost': '코스트',
+    'timmings': '타이밍',
+    'effects': '효과',
+    'burst': '라이프 버스트'
+  },
+  'cardType': {
+    'LRIG': '루리그',
+    'SIGNI': '시그니',
+    'SPELL': '스펠',
+    'ARTS': '아츠',
+    'RESONA': '레조나'
+  },
+  'color': {
+    'white': '백',
+    'black': '흑',
+    'red': '적',
+    'blue': '청',
+    'green': '녹',
+    'colorless': '무'
+  },
+  'costColor': {
+    'costWhite': '백',
+    'costBlack': '흑',
+    'costRed': '적',
+    'costBlue': '청',
+    'costGreen': '녹',
+    'costColorless': '무'
+  },
+  'timming': {
+    'mainPhase': '[메인 페이즈]',
+    'attackPhase': '[어택 페이즈]',
+    'spellCutIn': '[스펠 컷인]'
+  },
+  'class': {
+    'タマ': '타마',
+    '花代': '하나요',
+    'ユヅキ': '유즈키',
+    'ピルルク': '피루루크',
+    'エルドラ': '엘도라',
+    'ミルルン': '미루룽',
+    '緑子': '미도리코',
+    'アン': '안',
+    'ウリス': '우리스',
+    'イオナ': '이오나',
+    'ウムル': '움르',
+    'リメンバ': '리멤버',
+    'タウィル': '타윌',
+    'サシェ': '사셰',
+    'ミュウ': '뮤',
+    'アイヤイ': '아이야이',
+    'アルフォウ': '알포우',
+    'ハナレ': '하나레',
+    '精像': '정상',
+    '天使': '천사',
+    '悪魔': '악마',
+    '美巧': '미교',
+    '精武': '정무',
+    'アーム': '암',
+    'ウェポン': '웨펀',
+    '遊具': '유구',
+    '毒牙': '독아',
+    '精羅': '정나',
+    '鉱石': '광석',
+    '宝石': '보석',
+    '植物': '식물',
+    '原子': '원자',
+    '宇宙': '우주',
+    '精械': '정계',
+    '電機': '전기',
+    '古代兵器': '고대병기',
+    '迷宮': '미궁',
+    '精生': '정생',
+    '水獣': '수수',
+    '空獣': '공수',
+    '地獣': '지수',
+    '龍獣': '용수',
+    '凶蟲': '흉충',
+    '精元': '정원'
+  },
+  DOM: {
+    'index': {
+      // 'link-support-webxoss': {
+      //  textContent: 'WEBXOSS NEEDS YOUR HELP!',
+      //  href: 'about_en.html#support'
+      // },
+      'link-version': '<코드 아트 †SC†>',
+      // 'label-nickname': 'あなたのニックネーム:',
+      'label-nickname': '닉네임:',
+      'input-nickame': {
+        placeholder: '닉네임'
+      },
+      'link-edit-deck': '덱 편집',
+      'label-bgm': 'BGM',
+      'label-sound-effect': 'SE',
+      'label-room-list': '방 목록:',
+      'span-play-replay': '리플레이 재생',
+      'label-create-room-password': '패스워드:',
+      'label-mayus-room': '마유의 방',
+      'label-create-room': '방 생성:',
+      'input-room-name': {
+        placeholder: '방 제목'
+      },
+      'button-create-room': '완료',
+      'link-about': {
+        // textContent: 'このサイトについて',
+        textContent: 'About',
+        href: 'about_en.html'
+      },
+      // 'link-service': 'サービスについて',
+      'link-service': {
+        textContent: 'Terms',
+        href: 'service_en.html'
+      },
+      // 'link-disclaimer': '責任取りについて',
+      'link-disclaimer': {
+        textContent: 'Disclaimer',
+        href: 'service_en.html#disclaimer'
+      },
+      'link-supporters': {
+        // textContent: 'サポーターリスト',
+        textContent: 'Supporters',
+        href: 'supporters_en.html'
+      },
+      'span-leave-room': '<<돌아가기',
+      'label-live': 'LIVE',
+      // 'label-room': '部屋:',
+      // 'label-host': 'ホスト:',
+      // 'label-guest': 'ゲスト:',
+      'label-ready': '준비',
+      // 'label-deck': 'デッキ:',
+      'button-replay-step': 'STEP',
+      'button-replay-auto': 'AUTO',
+      'span-surrender': '항복하기',
+      'span-leave-game': '돌아가기',
+      'chat-input': {
+        placeholder: '대화 입력'
+      },
+      'label-replay-list': '리플레이 리스트:',
+      'label-replay-file': '파일:',
+      'button-replay-return': '돌아가기',
+      'reconnect-title': '연결이 끊어졌습니다.',
+      'reconnect-retry': '재접속중...',
+      'wait-for-reconnect-title': '대전 상대의 연결이 끊어졌습니다.',
+      'wait-for-reconnect-retry': '재접속을 기다리고 있습니다...',
+      'wait-for-reconnect-button-drop': '기다리지 않는다',
+      'span-set-proxy': '프록시 설정',
+      'proxy-title': '프록시',
+      'proxy-description': '만약 WEBXOSS 서버가 원활하지 않다면, 프록시를 시도할 수 있습니다.',
+      'proxy-noproxy': '프록시 없음',
+      'proxy-cloudflare': 'CloudFlare',
+      'proxy-incapsula': 'Incapsula',
+      'proxy-provide': '서버 제공중...',
+      'proxy-button-ok': '확인',
+      'msgbox-button-ok': '확인',
+      'msgbox-button-cancel': '캔슬'
+    },
+    'DeckEditor': {
+      'link-back-to-webxoss': '작성 완료',
+      'label-select-deck': '덱 고르기:',
+      'button-delete-deck': '삭제',
+      'button-rename': '명명',
+      'label-new-deck': '새로운 덱:',
+      'input-new-deck-name': {
+        placeholder: '덱 이름',
+      },
+      'button-new-deck': '신규',
+      'button-copy-deck': '복제',
+      'button-import-export': '불러오기/저장하기',
+      'main-deck-title': '메인 덱',
+      'main-deck-mayus-room': '마유의 방',
+      'main-deck-burst-title': '라이프 버스트:',
+      'lrig-deck-title': '루리그 덱',
+      'label-import-from-file': '파일에서 불러오기:',
+      'label-export-to-file': '파일로 저장하기:',
+      'button-export': '저장하기',
+      'button-text': '텍스트 표시',
+      'button-export-code': '코드 표시',
+      'button-import-code': '코드 불러오기',
+      'button-import-export-cancel': '캔슬',
+      'search-input': {
+        placeholder: '키워드로 검색'
+      },
+      'link-search-tips': {
+        textContent: '힌트',
+        href: 'SearchTips_en.html'
+      },
+      'search-show-more': '좀더 찾기…'
+    }
+  },
+  'index': {
+    'REQUIRE_UPDATE': '새로운 버전이 필요합니다.\n클라이언트를 갱신해주세요.',
+    'UPDATING': '갱신중…',
+    // 'UPDATE_READY': 'アップデート終了しました。ここでクリックと完成する。',
+    'UPDATE_READY': '갱신 완료했습니다. 여기를 클릭해주세요.',
+    'NET_WORK_ERROR': '네트워크에 에러가 발생했습니다.',
+    'DISCONNECTED': '연결이 끊어졌습니다.',
+    'NO_VALID_DECK': '덱이 없습니다.',
+    'OPPONENT_DISCONNECTED': '대전 상대의 연결이 끊어졌습니다.',
+    'SELF_DISCONNECTED': '対戦者が切断されました。',
+    'PLEASE_INPUT_A_NICKNAME': '닉네임을 입력해주세요.',
+    'PLEASE_INPUT_A_ROOM_NAME': '방 이름을 입력해주세요.',
+    'FAILED_TO_READ_DECK': '덱을 로딩하는데 실패했습니다.',
+    'NEW_GUEST': '%s 방에 들어왔습니다.',
+    'GUEST_LEFT': '%s 방을 나갔습니다.',
+    'READY': '대전 상대의 준비가 완료되었습니다.',
+    'UNREADY': '준비 해재',
+    'INPUT_PASSWORD': '패스워드',
+    'WRONG_PASSWORD': '패스워드가 바르지 않습니다.',
+    'NOT_CONNECTED': '아직 서버에 접속되어있지 않습니다.\n나중에 다시 한번 시도해주세요.',
+    'SUPPORT_URL': 'about_en.html#support',
+    'CONFIRM_SURRENDER': '정말로 항복하시겠습니까?',
+    'SURRENDERED': '항복했습니다.',
+    'OPPONENT_SURRENDERED': '대전 상대가 항복했습니다.',
+    'CONFIRM_CLOSE': '게임을 떠나시겠습니까?',
+    'DROPPED': '대전 상대가 게임을 떠났습니다.',
+    'SAVE_REPLAY': '리플레이를 보존',
+    'FAILED_TO_PARSE_REPLAY': '파일 해석에 실패했습니다.',
+    'UNSUPPORTED_REPLAY_VERSION': '지원하지 않는 리플레이 버전입니다.\n클라이언트를 업데이트 바랍니다.',
+    'PROVIDE_PROXY_SERVER': '프록시 서버를 지원하고 싶습니까?\n webxoss@gmail.com 으로 연락 주세요!\nWEBXOSS는 당신의 협력에 감사합니다!',
+    'FETCHING_DATA': '데이터를 가져오는 중...\n확인을 눌러 취소.',
+    'FAILED_TO_FETCH_DATA': '데이터를 가져오는데 실패했습니다!'
+  },
+  'editor': {
+    'PLEASE_INPUT_A_DECK_NAME': '덱 이름을 입력해주세요.',
+    'DECK_NAME': '덱 이름',
+    'DECK_NAME_ALREADY_EXISTS': '덱 "%s"은 이미 존재하고 있습니다.',
+    'FAILED_TO_PARSE_FILE': '파일 해석에 실패했습니다.',
+    'FAILED_TO_PARSE_CODE': '코드 해석에 실패했습니다.',
+    'CONFIRM_DELETE_DECK': '정말로 "%s"를 지우시겠습니까?'
+  }
+};
+
 var map_zh_TW = Object.create(map_zh_CN);
 map_zh_TW.traditional = true;
 
@@ -1862,6 +2242,9 @@ Localize.setLanguage = function (lang) {
 		localStorage.setItem('language',lang);
 	} else if (lang === 'jp') {
 		Localize.map = map_jp;
+		localStorage.setItem('language',lang);
+	} else if (lang === 'ko') {
+		Localize.map = map_ko;
 		localStorage.setItem('language',lang);
 	} else if (lang === 'ru') {
 		Localize.map = map_ru;

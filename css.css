@@ -4,7 +4,7 @@ html {
 }
 body {
 	position: relative;
-	font-family: 'Microsoft YaHei','WenQuanYi Zen Hei',sans-serif;
+	font-family: 'Microsoft YaHei','WenQuanYi Zen Hei','Helvetica Neue',Helvetica,Arial,sans-serif;
 	margin: 0;
 	padding: 0;
 	/*height: 739px;*/

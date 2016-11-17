@@ -28,6 +28,11 @@ Cards:
 	Total: 1778 cards
 
 Versions:
+<技艺代号 †S·C†> (2016-11-18)
+  + New language support: Korean.
+  Translated by Aiyai and DC WIXOSS gallery.
+  Thank you!
+
 <枯树生华> (2016-10-31)
   + Add cards: WX13 && PR cards.
   + Add new proxy server: HongKong.

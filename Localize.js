@@ -6,7 +6,8 @@ var map_zh_CN = {
 	common: {
 		'OK': '确定',
 		'CANCEL': '取消',
-		'NO_CARDS': '没有卡牌'
+		'NO_CARDS': '没有卡牌',
+		'or': '或'
 	},
 	_misc: {
 		'DIALOG_TITLE_EFFECTS': '多个效果发动,选择一个优先处理',
@@ -364,7 +365,8 @@ var map_en = {
 	common: {
 		'OK': 'OK',
 		'CANCEL': 'CANCEL',
-		'NO_CARDS': 'No cards'
+		'NO_CARDS': 'No cards',
+		'or': 'or'
 	},
 	_misc: {
 		'DIALOG_TITLE_EFFECTS': 'Multiple effects have been triggered\nChoose one to resolve.',
@@ -722,7 +724,8 @@ var map_jp = {
 	common: {
 		'OK': 'OK',
 		'CANCEL': 'キャンセル',
-		'NO_CARDS': 'カードはありません'
+		'NO_CARDS': 'カードはありません',
+		'or': 'または'
 	},
 	_misc: {
 		'DIALOG_TITLE_EFFECTS': '複数の効果が同時に発動しています。\n先に処理するのを一つ選びなさい。',
@@ -1101,7 +1104,8 @@ var map_ru = {
 	common: {
 		'OK': 'OK',
 		'CANCEL': 'Отмена',
-		'NO_CARDS': 'Нет карт'
+		'NO_CARDS': 'Нет карт',
+		'or': 'or'
 	},
 	_misc: {
 		'DIALOG_TITLE_EFFECTS': 'Сработало несколько способностей.\nВыберите какую выполнить.',
@@ -1461,7 +1465,8 @@ var map_it = {
 	common: {
 		'OK': 'OK',
 		'CANCEL': 'CANCEL',
-		'NO_CARDS': 'No cards'
+		'NO_CARDS': 'No cards',
+		'or': 'or'
 	},
 	_misc: {
 		'DIALOG_TITLE_EFFECTS': 'Piu effetti sono stati attivati\nScegline uno da risolvere.',
@@ -1819,7 +1824,8 @@ var map_ko = {
   common: {
     'OK': '확인',
     'CANCEL': '캔슬',
-    'NO_CARDS': '카드가 없습니다'
+    'NO_CARDS': '카드가 없습니다',
+		'or': 'or'
   },
   _misc: {
     'DIALOG_TITLE_EFFECTS': '복수의 효과가 동시에 발동되었습니다.\n먼저 처리할 효과를 하나 골라주세요',
@@ -2425,6 +2431,11 @@ Localize.guard = function (info) {
 };
 
 Localize.cost = function (info) {
+	if (info.costOr) {
+		return info.costOr.map(function (color) {
+			return Localize('costColor',color);
+		},this).join(' ' + Localize('common', 'OR') + ' ');
+	}
 	var props = ['costWhite','costBlack','costRed','costBlue','costGreen','costColorless'];
 	// var colors = ['白','黑','红','蓝','绿','无'];
 	var text = '';
@@ -2458,6 +2469,7 @@ Localize.classes = function (info) {
 	if (!info.classes) return '-';
 	var separator = Localize('_misc','CLASS_SEPARATOR');
 	return info.classes.map(function (cls) {
+		if (cls === '?') return '?';
 		return Localize('class',cls);
 	}).join(separator) || '-';
 };

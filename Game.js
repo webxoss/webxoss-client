@@ -299,6 +299,8 @@ Game.prototype.handleShowText = function (msg) {
 	var text = '';
 	if (msg.type === 'number') {
 		text = msg.content;
+	} else if (msg.type === 'text') {
+		text = Localize('gameText',msg.content);
 	} else {
 		debugger;
 	}

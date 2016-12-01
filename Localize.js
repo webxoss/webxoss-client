@@ -7,7 +7,7 @@ var map_zh_CN = {
 		'OK': '确定',
 		'CANCEL': '取消',
 		'NO_CARDS': '没有卡牌',
-		'or': '或'
+		'OR': '或'
 	},
 	_misc: {
 		'DIALOG_TITLE_EFFECTS': '多个效果发动,选择一个优先处理',
@@ -2433,7 +2433,7 @@ Localize.guard = function (info) {
 Localize.cost = function (info) {
 	if (info.costOr) {
 		return info.costOr.map(function (color) {
-			return Localize('costColor',color);
+			return Localize('color',color);
 		},this).join(' ' + Localize('common', 'OR') + ' ');
 	}
 	var props = ['costWhite','costBlack','costRed','costBlue','costGreen','costColorless'];

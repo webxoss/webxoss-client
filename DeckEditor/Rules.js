@@ -516,11 +516,12 @@ IllustRule.parse = function (words) {
 //    "WD01-001","wd01-001","wD01001"  // 仅匹配"WD01-001"
 //    "wx02-01","WX0201"  // 匹配"WX02-010"至"WX02-019"
 //    "wd03-","WD03"      // 匹配"WD03"的所有卡
+//    "wx12-re01","WX12CB" // 匹配re,CB卡
 //
 ///////////////////////////////////////////////////////////////
 var WxidRule = {};
 WxidRule.parseWord = function (word) {
-	var match = word.match(/^(wx\d{2}|wd\d{2}|pr|sp\d{2})-?(\d{0,3})$/);
+	var match = word.match(/^(wx\d{2}|wd\d{2}|pr|sp\d{2})-?(re\d{0,2}|cb\d{0,2}|\d{0,3})$/);
 	if (!match) return null;
 	return match[1] + '-' + match[2];
 }

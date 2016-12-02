@@ -555,13 +555,13 @@ WxidRule.parse = function (words) {
 ///////////////////////////////////////////////////////////////
 var NameRule = {};
 NameRule.dotRegex =
-	/[\u00B7\u0387\u05BC\u2022\u2027\u2219\u22C5\u30FB\uFF0E\uFF65]/g;
+	/[\u00B7\u0387\u05BC\u2022\u2027\u2219\u22C5\u30FB\uFF0E\uFF65⁑:*†]/g;
 NameRule.fullWidth =
-	'０１２３４５６７８９＝＠' +
+	'０１２３４５６７８９＝＠＃' +
 	'ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ' +
 	'ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ';
 NameRule.halfWidth =
-	'0123456789=@' +
+	'0123456789=@#' +
 	'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
 	'abcdefghijklmnopqrstuvwxyz';
 NameRule.normalizeString = function (str) {

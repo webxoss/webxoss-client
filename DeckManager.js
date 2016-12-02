@@ -205,6 +205,9 @@ DeckManager.prototype.checkDuplicate = function (pids) {
 	var bucket = {};
 	pids.forEach(function (pid) {
 		var info = CardInfo[pid];
+		if (info.sideA) {
+			info = CardInfo[info.sideA]
+		}
 		if (info.cid in bucket) {
 			bucket[info.cid]++;
 		} else {

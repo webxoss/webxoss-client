@@ -521,7 +521,7 @@ IllustRule.parse = function (words) {
 ///////////////////////////////////////////////////////////////
 var WxidRule = {};
 WxidRule.parseWord = function (word) {
-	var match = word.match(/^(wx\d{2}|wd\d{2}|pr|sp\d{2})-?(re\d{0,2}|cb\d{0,2}|\d{0,3})$/);
+	var match = word.match(/^(wx\d{2}|wd\d{2}|pr|sp\d{2})-?(re\d{0,2}|cb\d{0,2}|\d{0,3}[a|b]?)$/);
 	if (!match) return null;
 	return match[1] + '-' + match[2];
 }

@@ -11,6 +11,7 @@ function Zone (cfg) {
 	this.showAmount = !!cfg.showAmount;
 	this._amount = 0;
 	this.opposite = !!cfg.opposite;
+	this.checkable  = !!cfg.checkable;
 
 	this.cards = [];
 	this.changed = true;
@@ -23,6 +24,17 @@ function Zone (cfg) {
 	if (this.opposite) {
 		this.rotation = 180;
 		this.text.rotation = 180;
+	}
+
+	this.buttonLayer = new ButtonList();
+	this.buttonLayer.rotation = -this.rotation;
+	this.addChild(this.buttonLayer);
+
+	if (this.checkable) {
+		this.viewCardsButton = new Button(Localize('buttonTitle','VIEW'),function () {
+			this.game.dialog.showCards(Localize('buttonTitle','VIEW'),this.cards,function () {});
+		}.bind(this));
+		this.viewCardsButton.alpha = 0.8;
 	}
 
 	this.game.addZone(this);
@@ -101,7 +113,6 @@ function StackZone (cfg) {
 	Zone.apply(this,arguments);
 
 	this.showPower  = !!cfg.showPower;
-	this.checkable  = !!cfg.checkable;
 
 	this.changed = true;
 	this._power = 0;
@@ -123,17 +134,6 @@ function StackZone (cfg) {
 	this.stateShape = new createjs.Shape();
 	this.stateLayer.addChild(this.stateShape);
 	this.addChild(this.stateLayer);
-
-	this.buttonLayer = new ButtonList();
-	this.buttonLayer.rotation = -this.rotation;
-	this.addChild(this.buttonLayer);
-
-	if (this.checkable) {
-		this.viewCardsButton = new Button(Localize('buttonTitle','VIEW'),function () {
-			this.game.dialog.showCards(Localize('buttonTitle','VIEW'),this.cards,function () {});
-		}.bind(this));
-		this.viewCardsButton.alpha = 0.8;
-	}
 }
 
 StackZone.prototype = Object.create(Zone.prototype);
@@ -234,6 +234,11 @@ function TileZone (cfg) {
 			this.text.textBaseline = 'bottom';
 		}
 	}
+
+	if (this.checkable) {
+		this.buttonLayer.y += this.width / 2
+		this.buttonLayer.addButton(this.viewCardsButton)
+	}
 }
 
 TileZone.prototype = Object.create(Zone.prototype);
@@ -284,4 +289,9 @@ TileZone.prototype.updateCardPosition = function () {
 			card.moveTo(this.x,this.y + factor*(base+j*delta));
 		},this);
 	}
+};
+
+TileZone.prototype.update = function () {
+	this.buttonLayer.visible = this.cards.length > 4;
+	return Zone.prototype.update.call(this);
 };

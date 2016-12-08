@@ -12,7 +12,8 @@ Game.prototype.initZones = function () {
 			center: false,
 			width: 259,
 			spacing: 5,
-			showAmount: true
+			showAmount: true,
+			checkable: true
 		}),
 		signiZones: [
 			new StackZone({
@@ -124,7 +125,8 @@ Game.prototype.initZones = function () {
 			center: false,
 			width: 259,
 			spacing: 5,
-			showAmount: true
+			showAmount: true,
+			checkable: true
 		}),
 		signiZones: [
 			new StackZone({

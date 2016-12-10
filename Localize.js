@@ -122,6 +122,9 @@ var map_zh_CN = {
 		'PUT_TO_ENER_ZONE': '放置到能量区',
 		'CONFIRM_ENCORE': '要支付回响费用吗？',
 		'MAIN_DECK': '卡组',
+		'HAND': '手牌',
+		'SIGNI_ZONE': '精灵区',
+		'TRASH_ZONE': '废弃区',
 		'LIFE_CLOTH': '生命护甲',
 		'SELECT_DONE': '完成选择'
 	},
@@ -481,6 +484,9 @@ var map_en = {
 		'PUT_TO_ENER_ZONE': 'Put to Ener Zone',
 		'CONFIRM_ENCORE': 'Do you want to pay for Encore?',
 		'MAIN_DECK': 'Main Deck',
+		'HAND': 'Hand',
+		'SIGNI_ZONE': 'SIGNI Zone',
+		'TRASH_ZONE': 'Trash Zone',
 		'LIFE_CLOTH': 'Life Cloth',
 		'SELECT_DONE': 'End select'
 	},
@@ -855,6 +861,9 @@ var map_jp = {
 		'PUT_TO_ENER_ZONE': 'エナゾーンに置く',
 		'CONFIRM_ENCORE': 'アンコールを使用しますか？',
 		'MAIN_DECK': 'デッキ',
+		'HAND': '手札',
+		'SIGNI_ZONE': 'シグニゾーン',
+		'TRASH_ZONE': 'トラッシュ',
 		'LIFE_CLOTH': 'ライフクロス',
 		'SELECT_DONE': '選択完成'
 	},
@@ -1222,6 +1231,9 @@ var map_ru = {
 		'PUT_TO_ENER_ZONE': 'Поместить в энер-зону',
 		'CONFIRM_ENCORE': 'Заплатить за Продление?',
 		'MAIN_DECK': 'Основная колода',
+		'HAND': 'руку',
+		'SIGNI_ZONE': 'Зону Записей',
+		'TRASH_ZONE': 'сброс',
 		'LIFE_CLOTH': 'Жизненная материя',
 		'SELECT_DONE': 'Завершить'
 	},
@@ -1581,6 +1593,9 @@ var map_it = {
 		'PUT_TO_ENER_ZONE': 'Metti nella Ener Zone',
 		'CONFIRM_ENCORE': 'Vuoi pagare il costo di Encore?',
 		'MAIN_DECK': 'Main Deck',
+		'HAND': 'Hand',
+		'SIGNI_ZONE': 'SIGNI Zone',
+		'TRASH_ZONE': 'Trash Zone',
 		'LIFE_CLOTH': 'Life Cloth',
 		'SELECT_DONE': 'Termina'
 	},
@@ -1956,6 +1971,9 @@ var map_ko = {
     'PUT_TO_ENER_ZONE': '에나 존에 둔다',
     'CONFIRM_ENCORE': '앵콜을 사용합니까?',
     'MAIN_DECK': '덱',
+		'HAND': 'Hand',
+		'SIGNI_ZONE': 'SIGNI Zone',
+		'TRASH_ZONE': 'Trash Zone',
     'LIFE_CLOTH': '라이프 클로스',
     'SELECT_DONE': '선택 완료'
   },

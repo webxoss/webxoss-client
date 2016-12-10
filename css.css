@@ -34,18 +34,6 @@ ol,ul,li {
 	font-size: small;
 	/*cursor: pointer;*/
 }
-#link-helper-wanted {
-	display: none;
-}
-#subtitle.helper-wanted #link-helper-wanted {
-	display: block;
-	font-weight: bold;
-	color: blue !important;
-	cursor: pointer;
-}
-#subtitle.helper-wanted #link-version {
-	display: none;
-}
 /*#notice-match {
 	display: none;
 }

@@ -1067,17 +1067,17 @@ checkDomain();
 // 	};
 // }
 
-if (localStorage.getItem('notice') !== 'helper-wanted') {
-	if (Localize.getLanguage() === 'zh_CN') {
-		$('subtitle').className = 'helper-wanted';
-		$('link-helper-wanted').onclick = function () {
-			$('subtitle').className = '';
-			localStorage.setItem('notice','helper-wanted');
-			msgBox.preset('helper-wanted');
-			$('helper-wanted-button-ok').onclick = msgBox.close.bind(msgBox);
-		};
-	}
-}
+// if (localStorage.getItem('notice') !== 'helper-wanted') {
+// 	if (Localize.getLanguage() === 'zh_CN') {
+// 		$('subtitle').className = 'helper-wanted';
+// 		$('link-helper-wanted').onclick = function () {
+// 			$('subtitle').className = '';
+// 			localStorage.setItem('notice','helper-wanted');
+// 			msgBox.preset('helper-wanted');
+// 			$('helper-wanted-button-ok').onclick = msgBox.close.bind(msgBox);
+// 		};
+// 	}
+// }
 
 // 通知
 // if (localStorage.getItem('notice')) {

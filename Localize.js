@@ -219,7 +219,7 @@ var map_zh_CN = {
 			// 	textContent: 'WEBXOSS需要您的帮助!',
 			// 	href: 'about.html#support'
 			// },
-			'link-version': '<技艺代号 †S·C†>',
+			'link-version': '<纺织者>',
 			'label-nickname': '您的昵称:',
 			'input-nickame': {
 				placeholder: '昵称'
@@ -578,7 +578,7 @@ var map_en = {
 			// 	textContent: 'WEBXOSS NEEDS YOUR HELP!',
 			// 	href: 'about_en.html#support'
 			// },
-			'link-version': '<Code Art †SC†>',
+			'link-version': '<The Spinner>',
 			'label-nickname': 'Nickname:',
 			'input-nickame': {
 				placeholder: 'nickname'
@@ -952,7 +952,7 @@ var map_jp = {
 			// 	textContent: 'WEBXOSS NEEDS YOUR HELP!',
 			// 	href: 'about_en.html#support'
 			// },
-			'link-version': '<コードアート　†Ｓ・Ｃ†>',
+			'link-version': '<紡ぐ者>',
 			// 'label-nickname': 'あなたのニックネーム:',
 			'label-nickname': 'ニックネーム:',
 			'input-nickame': {
@@ -1319,7 +1319,7 @@ var map_ru = {
 			// 	textContent: 'WEBXOSS НУЖДАЕТСЯ В ПОМОЩИ!',
 			// 	href: 'supporters_en.html'
 			// },
-			'link-version': '<Code Art †SC†>',
+			'link-version': '<The Spinner>',
 			'label-nickname': 'Никнейм:',
 			'input-nickame': {
 				placeholder: 'никнейм'
@@ -1678,7 +1678,7 @@ var map_it = {
 			// 	textContent: 'WEBXOSS HA BISOGNO DEL TUO AIUTO!',
 			// 	href: 'about_en.html#support'
 			// },
-			'link-version': '<Code Art †SC†>',
+			'link-version': '<The Spinner>',
 			'label-nickname': 'Nickname:',
 			'input-nickame': {
 				placeholder: 'nickname'
@@ -2053,7 +2053,7 @@ var map_ko = {
       //  textContent: 'WEBXOSS NEEDS YOUR HELP!',
       //  href: 'about_en.html#support'
       // },
-      'link-version': '<코드 아트 †SC†>',
+      'link-version': '<실을 짜는 자>',
       // 'label-nickname': 'あなたのニックネーム:',
       'label-nickname': '닉네임:',
       'input-nickame': {

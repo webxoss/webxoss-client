@@ -1,7 +1,7 @@
 Cards:
-	Newly Added: WX13 && PR cards.
+	Newly Added: WX14, SP17~SP19, PR cards before WX15.
 	Pre-built Deck: WD01~WD16
-	Booster Packs: WX01~WX13
+	Booster Packs: WX01~WX14
 	PR Cards:
 		001-120
 		123-148
@@ -19,15 +19,18 @@ Cards:
 		232-233
 		237-238
 		240-266
-		268-275
-		277-278
-		281-294
+		268-295
 		297-304
-		306
-	SP Cards: SP01~SP03, SP06~SP07, SP10, SP16
-	Total: 1778 cards
+		306-307
+		309-310
+		312-321
+	SP Cards: SP01~SP03, SP06~SP07, SP10, SP17~SP19
+	Total: 1897 cards
 
 Versions:
+<纺织者> (2016-12-10)
+  + Add cards: WX14, SP17~SP19, PR cards before WX15
+
 <技艺代号 †S·C†> (2016-11-18)
   + New language support: Korean.
   Translated by Aiyai and DC WIXOSS gallery.

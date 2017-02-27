@@ -420,6 +420,11 @@ Game.prototype.handleSelectCardId = function (msg) {
 };
 
 Game.prototype.handleConfirm = function (msg) {
+	// TODO...
+	return true;
+};
+
+Game.prototype.handleCoinChange = function (msg) {
 	if (this.skip) return true;
 	var title = Localize.labelToDialogTitle('CONFIRM');
 	var text = Localize('gameText',msg.text);
@@ -557,6 +562,7 @@ Game.prototype.handleMsg = function (msg) {
 		'SELECT_TEXT': this.handleSelectText,
 		'SELECT_CARD_ID': this.handleSelectCardId,
 		'CONFIRM': this.handleConfirm,
+		'COIN_CHANGE': this.handleCoinChange,
 		// 'ROCK_PAPER_SCISSORS': this.handleRockPaperScissors,
 		// 'WAIT_FOR_OPPONENT': this.handleWaitForOpponent,
 		'WIN': this.handleWin,

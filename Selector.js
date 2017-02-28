@@ -68,13 +68,16 @@ Selector.prototype.showButtons = function () {
 				var buttonCarrier;
 				var description = msg.descriptions[idx];
 				if (card.shouldUseDialog()) {
-					if (card.zone.constructor === TileZone && card.zone.name !== 'EnerZone') {
+					if (card.zone.constructor === TileZone) {
 						buttonCarrier = this.game.buttonZone;
 					} else {
 						buttonCarrier = card.zone;
 					}
 				} else {
 					buttonCarrier = card;
+				}
+				if (card.zone.name === 'EnerZone') {
+					buttonCarrier = card.zone.cards.length > 4 ? card.zone : card;
 				}
 				var data;
 				for (var i = 0; i < datas.length; i++) {

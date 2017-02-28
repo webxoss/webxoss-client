@@ -393,7 +393,7 @@ Dialog.prototype.selectSomeCards = function (title,cards,arg,callback) {
 
 Dialog.prototype.selectEner = function (title,cards,colors,cost,callback,onCancel) {
 	var texts = cards.map(function (card) {
-		return card.cid === cost.source ? 'WARN' : '';
+		return card.sid === cost.source ? 'WARN' : '';
 	},this);
 	this.selectCardAdvanced(title,cards,texts,false,false,onSelectChange,callback,onCancel);
 

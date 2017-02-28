@@ -419,12 +419,13 @@ Game.prototype.handleSelectCardId = function (msg) {
 	return true;
 };
 
-Game.prototype.handleConfirm = function (msg) {
-	// TODO...
+Game.prototype.handleCoinChange = function (msg) {
+	var player = msg.player === this.player.sid ? this.player : this.opponent;
+	player.coinZone.setText('Coin' + msg.coin);
 	return true;
 };
 
-Game.prototype.handleCoinChange = function (msg) {
+Game.prototype.handleConfirm = function (msg) {
 	if (this.skip) return true;
 	var title = Localize.labelToDialogTitle('CONFIRM');
 	var text = Localize('gameText',msg.text);

@@ -93,9 +93,16 @@ Game.prototype.initZones = function () {
 			up: false,
 			horizontal: true,
 			center: false,
-			width: 357,
+			width: Card.HEIGHT*3,
 			spacing: -Card.HEIGHT*2/3,
 			showAmount: true
+		}),
+		coinZone: new StackZone({
+			game: this,
+			name: 'CoinZone',
+			x: 471.5,
+			y: 604.5,
+			centerText: true,
 		}),
 		excludedZone: new StackZone({
 			game: this,
@@ -218,9 +225,16 @@ Game.prototype.initZones = function () {
 			up: false,
 			horizontal: true,
 			center: false,
-			width: 357,
+			width: Card.HEIGHT*3,
 			spacing: -Card.HEIGHT*2/3,
 			showAmount: true
+		}),
+		coinZone: new StackZone({
+			game: this,
+			name: 'CoinZone',
+			x: 576-471.5,
+			y: 734-604.5,
+			centerText: true,
 		}),
 		excludedZone: new StackZone({
 			game: this,
@@ -249,4 +263,6 @@ Game.prototype.initZones = function () {
 		y: 519,
 		centerText: true
 	});
+	this.player.coinZone.text.font = '14px monospace';
+	this.opponent.coinZone.text.font = '14px monospace';
 };

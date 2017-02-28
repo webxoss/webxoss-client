@@ -68,7 +68,7 @@ Selector.prototype.showButtons = function () {
 				var buttonCarrier;
 				var description = msg.descriptions[idx];
 				if (card.shouldUseDialog()) {
-					if (card.zone.constructor === TileZone) {
+					if (card.zone.constructor === TileZone && card.zone.name !== 'EnerZone') {
 						buttonCarrier = this.game.buttonZone;
 					} else {
 						buttonCarrier = card.zone;

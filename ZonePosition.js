@@ -21,6 +21,7 @@ Game.prototype.initZones = function () {
 				name: 'SigniZone',
 				x: 190,
 				y: 421,
+				checkable: true,
 				showPower: true
 			}),
 			new StackZone({
@@ -28,6 +29,7 @@ Game.prototype.initZones = function () {
 				name: 'SigniZone',
 				x: 288,
 				y: 421,
+				checkable: true,
 				showPower: true
 			}),
 			new StackZone({
@@ -35,6 +37,7 @@ Game.prototype.initZones = function () {
 				name: 'SigniZone',
 				x: 386,
 				y: 421,
+				checkable: true,
 				showPower: true
 			}),
 		],
@@ -134,6 +137,7 @@ Game.prototype.initZones = function () {
 				name: 'SigniZone',
 				x: 576-190,
 				y: 734-421,
+				checkable: true,
 				showPower: true,
 				opposite: true
 			}),
@@ -142,6 +146,7 @@ Game.prototype.initZones = function () {
 				name: 'SigniZone',
 				x: 576-288,
 				y: 734-421,
+				checkable: true,
 				showPower: true,
 				opposite: true
 			}),
@@ -150,6 +155,7 @@ Game.prototype.initZones = function () {
 				name: 'SigniZone',
 				x: 576-386,
 				y: 734-421,
+				checkable: true,
 				showPower: true,
 				opposite: true
 			}),

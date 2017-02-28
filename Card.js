@@ -174,6 +174,12 @@ Card.prototype.addButton = function (txt,onclick) {
 	// 	return;
 	// }
 
+	// 兼容参数为 button
+	if (txt.constructor === Button) {
+		var btn = txt;
+		this.buttonLayer.addButton(btn);
+		return;
+	}
 	var btn = new Button(txt,onclick.bind(this,this));
 	this.buttonLayer.addButton(btn);
 	// this.outlineOn();

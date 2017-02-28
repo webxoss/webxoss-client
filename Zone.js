@@ -79,12 +79,24 @@ Zone.prototype.update = function () {
 		var txt = (this._amount === 0)? '' : this._amount;
 		this.setText(txt);
 	}
-	var changed = this.changed;
+	var changed =  this.buttonLayer.update() || this.changed;
 	this.changed = false;
 	return changed;
 };
-Zone.prototype.addButton = function () {};
-Zone.prototype.removeButtons = function () {};
+Zone.prototype.addButton = function (txt,onclick/*,card*/) {
+	var btn = new Button(txt,onclick.bind(this,this));
+	this.buttonLayer.addButton(btn);
+};
+Zone.prototype.removeButtons = function () {
+	this.buttonLayer.removeAllButtons();
+	if (this.checkable && this.cards.length>1) {
+		if (this.name === 'SigniZone') {
+			this.cards[0].addButton(this.viewCardsButton);
+		} else {
+			this.buttonLayer.addButton(this.viewCardsButton);
+		}
+	}
+};
 Zone.prototype.setText = function (txt) {
 	this.changed = true;
 	if (!txt) {
@@ -149,18 +161,6 @@ StackZone.prototype.updateCardPosition = function () {
 	},this);
 };
 
-StackZone.prototype.addButton = function (txt,onclick/*,card*/) {
-	var btn = new Button(txt,onclick.bind(this,this));
-	this.buttonLayer.addButton(btn);
-};
-
-StackZone.prototype.removeButtons = function () {
-	this.buttonLayer.removeAllButtons();
-	if (this.checkable && this.cards.length>1) {
-		this.buttonLayer.addButton(this.viewCardsButton);
-	}
-};
-
 StackZone.prototype.addViewCardsButton = function () {
 	this.buttonLayer.addButton(this.viewCardsButton);
 };
@@ -187,7 +187,7 @@ Zone.prototype.removeStates = function () {
 };
 
 StackZone.prototype.update = function () {
-	var changed = this.buttonLayer.update() || this.changed;
+	var changed = this.changed;
 	if (this.showPower) {
 		if (this._amount !== this.cards.length) {
 			this._amount = this.cards.length;

@@ -28,6 +28,7 @@ function ImageManager (dir) {
 }
 
 ImageManager.prototype.getUrlByPid = function (pid) {
+	if (!pid) return this.black.src;
 	var url = window.ImageFileCache.getUrlByPid(pid);
 	if (url) return url;
 	url = this.dir + 'images/' + ('0000' + pid).slice(-4) + '.jpg';

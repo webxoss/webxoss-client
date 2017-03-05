@@ -86,7 +86,15 @@ if (location.search === '?local=true') {
 	console.log = function () {
 		window._lastLog = arguments;
 	};
-	var url = getProxy() || location.host;
+	var host = getProxy();
+	if (!host) {
+		if (/:\d*$/.test(location.host)) {
+			host = location.host.replace(/:\d*$/, ':2015');
+		} else {
+			host = location.host + ':2015'
+		}
+	}
+	var url = location.protocol + '//' + host
 	socket = io(url,{
 		reconnection: false,
 		reconnectionDelay: 3000,
@@ -101,6 +109,17 @@ var chatManager = new ChatManager(socket);
 
 /* 代理 */
 function getProxy () {
+	var proxy = localStorage.getItem('proxy');
+	// 兼容旧版
+	var updateMap = {
+		'cloudflare.webxoss.com': 'cloudflare.webxoss.com:2015',
+		'incapsula.webxoss.com': 'incapsula.webxoss.com:2015',
+		'shanghai.webxoss.com:10086': '',
+	};
+	if (proxy in updateMap) {
+		proxy = updateMap[proxy];
+		localStorage.setItem('proxy', proxy)
+	}
 	return localStorage.getItem('proxy') || '';
 }
 $('span-set-proxy').onclick = function () {

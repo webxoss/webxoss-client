@@ -227,7 +227,7 @@ var map_zh_CN = {
 			// 	textContent: 'WEBXOSS需要您的帮助!',
 			// 	href: 'about.html#support'
 			// },
-			'link-version': '<纺织者>',
+			'link-version': '<决死的记忆 莉露>',
 			'label-nickname': '您的昵称:',
 			'input-nickame': {
 				placeholder: '昵称'
@@ -594,7 +594,7 @@ var map_en = {
 			// 	textContent: 'WEBXOSS NEEDS YOUR HELP!',
 			// 	href: 'about_en.html#support'
 			// },
-			'link-version': '<The Spinner>',
+			'link-version': '<Ril, Memory of Desperation>',
 			'label-nickname': 'Nickname:',
 			'input-nickame': {
 				placeholder: 'nickname'
@@ -976,7 +976,7 @@ var map_jp = {
 			// 	textContent: 'WEBXOSS NEEDS YOUR HELP!',
 			// 	href: 'about_en.html#support'
 			// },
-			'link-version': '<紡ぐ者>',
+			'link-version': '<決死の記憶　リル>',
 			// 'label-nickname': 'あなたのニックネーム:',
 			'label-nickname': 'ニックネーム:',
 			'input-nickame': {
@@ -1351,7 +1351,7 @@ var map_ru = {
 			// 	textContent: 'WEBXOSS НУЖДАЕТСЯ В ПОМОЩИ!',
 			// 	href: 'supporters_en.html'
 			// },
-			'link-version': '<The Spinner>',
+			'link-version': '<Ril, Memory of Desperation>',
 			'label-nickname': 'Никнейм:',
 			'input-nickame': {
 				placeholder: 'никнейм'
@@ -1718,7 +1718,7 @@ var map_it = {
 			// 	textContent: 'WEBXOSS HA BISOGNO DEL TUO AIUTO!',
 			// 	href: 'about_en.html#support'
 			// },
-			'link-version': '<The Spinner>',
+			'link-version': '<Ril, Memory of Desperation>',
 			'label-nickname': 'Nickname:',
 			'input-nickame': {
 				placeholder: 'nickname'
@@ -2101,7 +2101,7 @@ var map_ko = {
       //  textContent: 'WEBXOSS NEEDS YOUR HELP!',
       //  href: 'about_en.html#support'
       // },
-      'link-version': '<실을 짜는 자>',
+      'link-version': '<결사의 기억 릴>',
       // 'label-nickname': 'あなたのニックネーム:',
       'label-nickname': '닉네임:',
       'input-nickame': {

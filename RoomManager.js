@@ -65,7 +65,7 @@ if (window.applicationCache) {
 }
 
 
-var VERSION = 66;
+var VERSION = 67;
 var serverVersion;
 var clientId = 0;
 var game = null;

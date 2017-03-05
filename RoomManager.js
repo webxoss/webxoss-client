@@ -1067,6 +1067,16 @@ function checkDomain () {
 }
 checkDomain();
 
+// new deck editor
+if (/iPhone|Android/i.test(navigator.userAgent)) {
+	$('link-edit-deck').onclick = function (event) {
+		if (window.confirm('Do you like to try our new DeckEditor for mobile phone?')) {
+			event.preventDefault();
+			location = '/next/';
+		}
+	}
+}
+
 // if (localStorage.getItem('notice') !== 'tournament') {
 // 	$('subtitle').className = 'match';
 // 	$('notice-match').onclick = function () {

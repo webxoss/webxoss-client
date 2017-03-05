@@ -54,7 +54,7 @@
   function handleSender() {
     if (localStorage.getItem('migrated')) {
       // already migrated, redirect to https
-      return location.protocol = 'https:'
+      return location.href = location.href.replace(/^http:/, 'https:')
     }
     window.addEventListener('message', function (event) {
       var origin = event.origin || event.originalEvent.origin;
@@ -68,7 +68,7 @@
       // get stored signal, done
       if (event.data === 'stored') {
         localStorage.setItem('migrated', true)
-        return location.protocol = 'https:'
+        return location.href = location.href.replace(/^http:/, 'https:')
       }
     }, false)
     iframe.src = 'https://' + location.host + '/migrate.html'

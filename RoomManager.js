@@ -112,8 +112,9 @@ function getProxy () {
 	var proxy = localStorage.getItem('proxy');
 	// 兼容旧版
 	var updateMap = {
-		'cloudflare.webxoss.com': 'cloudflare.webxoss.com:2015',
-		'incapsula.webxoss.com': 'incapsula.webxoss.com:2015',
+		'cloudflare.webxoss.com': 'cloudflare.webxoss.com:2053',
+		'cloudflare.webxoss.com:2015': 'cloudflare.webxoss.com:2053',
+		'incapsula.webxoss.com': '',
 		'shanghai.webxoss.com:10086': '',
 	};
 	if (proxy in updateMap) {

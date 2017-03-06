@@ -11,6 +11,39 @@
 	<script>
 		var global = window;
 		if (window.location != window.parent.location) window.parent.location = window.location;
+		// recieve migrated localStorage
+		(function () {
+			debugger
+			var storageJson = location.href.split('#storage=')[1]
+			if (storageJson && localStorage.getItem('migrated') !== '2') {
+				try {
+					var storage = JSON.parse(storageJson)
+					for (var key in storage) {
+						if (localStorage.getItem(key) !== null) {
+							// confilct
+							if (key.indexOf('deck_file_') !== 0) {
+								continue
+							}
+							key = key + '.old'
+						}
+						localStorage.setItem(key, storage[key])
+					}
+					// reset deck file names
+					var names = []
+					for (var i = 0; i < localStorage.length; i++) {
+						var key = localStorage.key(i)
+						if (key.indexOf('deck_file_') === 0) {
+							names.push(key.replace('deck_file_', ''))
+						}
+					}
+					location.hash = ''
+					localStorage.setItem('deck_filenames', JSON.stringify(names))
+					localStorage.setItem('migrated', 2)
+				} catch (e) {
+					console.warn('Failed to migrate localStorage.')
+				}
+			}
+		})()
 	</script>
 	<link rel="stylesheet" type="text/css" href="./css.css" />
 </head>

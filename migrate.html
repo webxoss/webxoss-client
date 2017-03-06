@@ -7,6 +7,19 @@
   <iframe id="iframe" style="display: none;" src="about:blank"></iframe>
   <script>
 (function () {
+  if (location.protocol === 'https:') {
+    return
+  }
+  // migrated by the old way, buggy in safari
+  if (localStorage.getItem('migrated') === 'true') {
+    if (navigator.userAgent.indexOf('safari') === -1) {
+      return location.replace(location.href.replace(/^http:/, 'https:'))
+    }
+  }
+  // migrated by the new way
+  if (localStorage.getItem('migrated') === '2') {
+    return location.replace(location.href.replace(/^http:/, 'https:'))
+  }
   function getStorage() {
     var storage = {}
     for (var i = 0; i < localStorage.length; i++) {
@@ -15,64 +28,11 @@
     }
     return storage
   }
-
-  var receive = location.protocol === 'https:'
-  var httpOrigin = location.origin.replace(/^https:/, 'http:')
-  var httpsOrigin = location.origin.replace(/^http:/, 'https:')
-  var iframe = document.getElementById('iframe')
-  if (receive) {
-    handleReciever()
-  } else {
-    handleSender()
-  }
-
-  function handleReciever() {
-    if (localStorage.getItem('migrated')) {
-      // already migrated, send stored signal
-      return window.parent.postMessage('stored', httpOrigin)
-    }
-    if (window.parent === window) {
-      return console.error('Not in iframe.')
-    }
-    // recieve storage
-    window.addEventListener('message', function (event) {
-      var origin = event.origin || event.originalEvent.origin;
-      if (origin !== httpOrigin) {
-        return console.warn(event)
-      }
-      var storage = JSON.parse(event.data)
-      for (var key in storage) {
-        localStorage.setItem(key, storage[key])
-      }
-      // send stored signal
-      window.parent.postMessage('stored', httpOrigin)
-    }, false)
-    // send ready signal
-    window.parent.postMessage('ready', httpOrigin)
-  }
-
-  function handleSender() {
-    if (localStorage.getItem('migrated')) {
-      // already migrated, redirect to https
-      return location.href = location.href.replace(/^http:/, 'https:')
-    }
-    window.addEventListener('message', function (event) {
-      var origin = event.origin || event.originalEvent.origin;
-      if (origin !== httpsOrigin) {
-        return console.warn(event)
-      }
-      // get ready signal, send storage
-      if (event.data === 'ready') {
-        iframe.contentWindow.postMessage(JSON.stringify(getStorage()), httpsOrigin)
-      }
-      // get stored signal, done
-      if (event.data === 'stored') {
-        localStorage.setItem('migrated', true)
-        return location.href = location.href.replace(/^http:/, 'https:')
-      }
-    }, false)
-    iframe.src = 'https://' + location.host + '/migrate.html'
-  }
+  var storage = getStorage()
+  localStorage.setItem('migrated', 2)
+  // pass localStorage via url hash, which is ignored in network request
+  var url = location.href.replace(/^http:/, 'https:') + '#storage=' + JSON.stringify(storage)
+  return location.replace(url)
 })()
   </script>
 </body>

@@ -12,7 +12,7 @@
   }
   // migrated by the old way, buggy in safari
   if (localStorage.getItem('migrated') === 'true') {
-    if (navigator.userAgent.indexOf('safari') === -1) {
+    if (!window.safari) {
       return location.replace(location.href.replace(/^http:/, 'https:'))
     }
   }

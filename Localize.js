@@ -227,7 +227,7 @@ var map_zh_CN = {
 			// 	textContent: 'WEBXOSS需要您的帮助!',
 			// 	href: 'about.html#support'
 			// },
-			'link-version': '<决死的记忆 莉露>',
+			'link-version': '<幻水姬 大白鲨>',
 			'label-nickname': '您的昵称:',
 			'input-nickame': {
 				placeholder: '昵称'
@@ -593,7 +593,7 @@ var map_en = {
 			// 	textContent: 'WEBXOSS NEEDS YOUR HELP!',
 			// 	href: 'about_en.html#support'
 			// },
-			'link-version': '<Ril, Memory of Desperation>',
+			'link-version': '<Gurehozame, Water Phantom Princess>',
 			'label-nickname': 'Nickname:',
 			'input-nickame': {
 				placeholder: 'nickname'
@@ -974,7 +974,7 @@ var map_jp = {
 			// 	textContent: 'WEBXOSS NEEDS YOUR HELP!',
 			// 	href: 'about_en.html#support'
 			// },
-			'link-version': '<決死の記憶　リル>',
+			'link-version': '<幻水姫　グレホザメ>',
 			// 'label-nickname': 'あなたのニックネーム:',
 			'label-nickname': 'ニックネーム:',
 			'input-nickame': {
@@ -1348,7 +1348,7 @@ var map_ru = {
 			// 	textContent: 'WEBXOSS НУЖДАЕТСЯ В ПОМОЩИ!',
 			// 	href: 'supporters_en.html'
 			// },
-			'link-version': '<Ril, Memory of Desperation>',
+			'link-version': '<Gurehozame, Water Phantom Princess>',
 			'label-nickname': 'Никнейм:',
 			'input-nickame': {
 				placeholder: 'никнейм'
@@ -1714,7 +1714,7 @@ var map_it = {
 			// 	textContent: 'WEBXOSS HA BISOGNO DEL TUO AIUTO!',
 			// 	href: 'about_en.html#support'
 			// },
-			'link-version': '<Ril, Memory of Desperation>',
+			'link-version': '<Gurehozame, Water Phantom Princess>',
 			'label-nickname': 'Nickname:',
 			'input-nickame': {
 				placeholder: 'nickname'
@@ -2096,7 +2096,7 @@ var map_ko = {
       //  textContent: 'WEBXOSS NEEDS YOUR HELP!',
       //  href: 'about_en.html#support'
       // },
-      'link-version': '<결사의 기억 릴>',
+      'link-version': '<환수희 구레호자메>',
       // 'label-nickname': 'あなたのニックネーム:',
       'label-nickname': '닉네임:',
       'input-nickame': {

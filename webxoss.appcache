@@ -11,6 +11,7 @@ css.css
 CardInfo.js
 CardInfo_ru.js
 CardInfo_ko.js
+WXB.js
 
 # DeckEditor #
 DeckEditor/

@@ -1,5 +1,5 @@
 Cards:
-	Newly Added: WXB.
+	Newly Added: WD17 && WD18.
 	Pre-built Deck: WD01~WD18
 	Booster Packs: WX01~WX14
 	PR Cards:
@@ -28,8 +28,9 @@ Cards:
 	Total: 1934 cards
 
 Versions:
-<幻水姫　グレホザメ> (2017-04-01)
-  + Add cards: WXB cards. (Tip: search "WXB")
+<決死の記憶　リル> (2017-03-05)
+  + Add cards: WD17 && WD18
+  + New deck editor for mobile
 
 <纺织者> (2016-12-10)
   + Add cards: WX14, SP17~SP19, PR cards before WX15

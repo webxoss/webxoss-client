@@ -21,7 +21,6 @@ function Searcher () {
 		NumberRule,
 		IllustRule,
 		WxidRule,
-		WxbidRule,
 		NameRule
 	];
 }

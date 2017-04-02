@@ -545,36 +545,6 @@ WxidRule.parse = function (words) {
 
 ///////////////////////////////////////////////////////////////
 //
-//  ID规则: WxbidRule.
-//  April Fool
-//
-///////////////////////////////////////////////////////////////
-var WxbidRule = {};
-WxbidRule.parseWord = function (word) {
-	var match = word.match(/^(wxb)-?(\d{0,3}?)$/);
-	if (!match) return null;
-	return match[1] + '-' + match[2];
-}
-WxbidRule.parse = function (words) {
-	var idLimits = [];
-	for (var i = 0; i < words.length; i++) {
-		var word = words[i];
-		var limit = this.parseWord(word);
-		if (!limit) continue;
-		idLimits.push(limit);
-		words.splice(i,1);
-		i--;
-	}
-	return function filter (info) {
-		if (!idLimits.length) return true;
-		return idLimits.some(function (limit) {
-			return info.wxbid && info.wxbid.toLowerCase().indexOf(limit) === 0;
-		});
-	};
-};
-
-///////////////////////////////////////////////////////////////
-//
 //  卡名规则: NameRule.
 //  匹配例子:
 //    "喷流 知识"       // 卡名同时包含"喷流"和"知识".

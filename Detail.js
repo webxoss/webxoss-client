@@ -57,7 +57,7 @@ CardDetail.prototype.show = function (pid) {
 	this.eTable.setAttribute('lang',Localize.getLanguage());
 	this.eTableBody.innerHTML = '';
 	var info = CardInfo[pid];
-	this.eWxid.textContent = info.wxbid || info.wxid;
+	this.eWxid.textContent = info.wxid;
 	this.eName.innerHTML = '';
 	var link = newElement('a');
 	link.target = '_blank';

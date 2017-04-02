@@ -28,6 +28,12 @@ Cards:
 	Total: 1934 cards
 
 Versions:
+<決死の記憶　リル> (2017-04-02)
+  - Remove WXB cards. It's an april fool.
+
+<幻水姫　グレホザメ> (2017-04-01)
+  + Add cards: WXB cards. (Tip: search "WXB")
+
 <決死の記憶　リル> (2017-03-05)
   + Add cards: WD17 && WD18
   + New deck editor for mobile

@@ -176,6 +176,8 @@ Zone.prototype.addStates = function (states) {
 			g.f('rgba(164,96,222,0.3)').r(-w/2,-h/2,w,h);
 		} else if (state === 'disabled') {
 			g.f('rgba(0,0,0,0.7)').r(-w/2,-h/2,w,h);
+		} else if (state === 'infected') {
+			g.f('rgba(255,0,0,0.3)').r(-w/2,-h/2,w,h);
 		}
 	},this);
 };

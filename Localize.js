@@ -1,8 +1,75 @@
 'use strict';
 window.Localize = (function () {
 
+// Load translations
+(function () {
+	function get(url, succ, err) {
+		var xhr = new XMLHttpRequest();
+		xhr.responseType = 'json';
+		xhr.onload = function () {
+			if (xhr.status === 200) {
+				succ(xhr.response);
+			} else {
+				if (err) err(xhr);
+			}
+		}
+		xhr.onerror = function () {
+			if (err) err(xhr);
+		};
+		xhr.open('GET', url, true);
+		xhr.send();
+	}
+	window.CardInfo_jp = Object.create(CardInfo);
+	window.CardInfo_zh = Object.create(CardInfo);
+	window.CardInfo_en = Object.create(CardInfo);
+	window.CardInfo_ko = Object.create(CardInfo);
+	window.CardInfo_ru = Object.create(CardInfo);
+	window.CardInfo_it = Object.create(CardInfo);
+	var dir = location.pathname.match(/\/DeckEditor\/?$/) ? '../lang/' : './lang/'
+	get(dir + 'CardInfo_en.json', function (translation) {
+		for (var pid in translation) {
+			var tran = translation[pid];
+			var info = Object.create(CardInfo_jp[pid]);
+			for (var prop in tran) {
+				info[prop] = tran[prop];
+			}
+			window.CardInfo_en[pid] = info;
+			window.CardInfo_it[pid] = info;
+		}
+	})
+	get(dir + 'CardInfo_zh_CN.json', function (translation) {
+		for (var pid in translation) {
+			var tran = translation[pid];
+			var info = Object.create(CardInfo_jp[pid]);
+			for (var prop in tran) {
+				info[prop] = tran[prop];
+			}
+			window.CardInfo_zh[pid] = info;
+		}
+	})
+	get(dir + 'CardInfo_ru.json', function (translation) {
+		for (var pid in translation) {
+			var tran = translation[pid];
+			var info = Object.create(CardInfo_jp[pid]);
+			for (var prop in tran) {
+				info[prop] = tran[prop];
+			}
+			window.CardInfo_ru[pid] = info;
+		}
+	})
+	get(dir + 'CardInfo_ko.json', function (translation) {
+		for (var pid in translation) {
+			var tran = translation[pid];
+			var info = Object.create(CardInfo_jp[pid]);
+			for (var prop in tran) {
+				info[prop] = tran[prop];
+			}
+			window.CardInfo_ko[pid] = info;
+		}
+	})
+})();
+
 var map_zh_CN = {
-	suffix: '_zh_CN',
 	common: {
 		'OK': '确定',
 		'CANCEL': '取消',
@@ -368,7 +435,6 @@ var map_zh_CN = {
 };
 
 var map_en = {
-	suffix: '_en',
 	common: {
 		'OK': 'OK',
 		'CANCEL': 'CANCEL',
@@ -734,7 +800,6 @@ var map_en = {
 };
 
 var map_jp = {
-	suffix: '',
 	common: {
 		'OK': 'OK',
 		'CANCEL': 'キャンセル',
@@ -1121,7 +1186,6 @@ var map_jp = {
 };
 
 var map_ru = {
-	suffix: '_ru',
 	common: {
 		'OK': 'OK',
 		'CANCEL': 'Отмена',
@@ -1489,7 +1553,6 @@ var map_ru = {
 };
 
 var map_it = {
-	suffix: '_en',
 	common: {
 		'OK': 'OK',
 		'CANCEL': 'CANCEL',
@@ -1855,7 +1918,6 @@ var map_it = {
 };
 
 var map_ko = {
-  suffix: '_ko',
   common: {
     'OK': '확인',
     'CANCEL': '캔슬',
@@ -2281,28 +2343,36 @@ Localize.getLanguage = function () {
 Localize.setLanguage = function (lang) {
 	if (lang === 'zh_CN') {
 		Localize.map = map_zh_CN;
+		CardInfo = CardInfo_zh;
 		localStorage.setItem('language',lang);
 	} else if (lang === 'zh_TW') {
 		Localize.map = map_zh_TW;
+		CardInfo = CardInfo_zh;
 		localStorage.setItem('language',lang);
 	} else if (lang === 'en') {
 		Localize.map = map_en;
+		CardInfo = CardInfo_en;
 		localStorage.setItem('language',lang);
 	} else if (lang === 'jp') {
 		Localize.map = map_jp;
+		CardInfo = CardInfo_jp;
 		localStorage.setItem('language',lang);
 	} else if (lang === 'ko') {
 		Localize.map = map_ko;
+		CardInfo = CardInfo_ko;
 		localStorage.setItem('language',lang);
 	} else if (lang === 'ru') {
 		Localize.map = map_ru;
+		CardInfo = CardInfo_ru;
 		localStorage.setItem('language',lang);
 	} else if (lang === 'it') {
 		Localize.map = map_it;
+		CardInfo = CardInfo_it;
 		localStorage.setItem('language',lang);
 	} else {
 		debugger;
 		Localize.map = map_en;
+		CardInfo = CardInfo_jp;
 	}
 };
 
@@ -2327,10 +2397,6 @@ Localize.traditionalize = function (str) {
 		}
 	}
 	return newStr;
-};
-
-Localize.suffix = function (str) {
-	return str + Localize.map.suffix;
 };
 
 Localize.index = Localize.bind(Localize,'index');
@@ -2415,7 +2481,7 @@ Localize.color = function (color) {
 };
 
 Localize.cardName = function (info) {
-	return Localize.traditionalize(info[Localize.suffix('name')]);
+	return Localize.traditionalize(info['name']);
 };
 
 Localize.cardType = function (info) {
@@ -2425,7 +2491,7 @@ Localize.cardType = function (info) {
 Localize.effectTexts = function (info) {
 	info = CardInfo[info.cid];
 	// 额外
-	var texts = concat(info[Localize.suffix('extraTexts')] || []);
+	var texts = concat(info['extraTexts'] || []);
 	// 防御
 	if (info.guardFlag) {
 		texts.push(Localize('_misc','GUARD_DESCRIPTION'));
@@ -2450,12 +2516,12 @@ Localize.effectTexts = function (info) {
 		texts.push(Localize('_misc','CROSS_RIGHT',toNames(info.crossRight)));
 	}
 	// 魔法技艺
-	[Localize.suffix('spellEffectTexts'),Localize.suffix('artsEffectTexts')].forEach(function (prop) {
+	['spellEffectTexts','artsEffectTexts'].forEach(function (prop) {
 		if (!info[prop]) return;
 		texts.push(info[prop][0]);
 	},this);
 	// 常出起
-	[Localize.suffix('constEffectTexts'),Localize.suffix('startUpEffectTexts'),Localize.suffix('actionEffectTexts')].forEach(function (prop) {
+	['constEffectTexts','startUpEffectTexts','actionEffectTexts'].forEach(function (prop) {
 		if (!info[prop]) return;
 		texts = texts.concat(info[prop]);
 	},this);
@@ -2464,8 +2530,8 @@ Localize.effectTexts = function (info) {
 
 Localize.burstEffectTexts = function (info) {
 	info = CardInfo[info.cid];
-	if (!info[Localize.suffix('burstEffectTexts')]) return '-';
-	return Localize.traditionalize(info[Localize.suffix('burstEffectTexts')][0]);
+	if (!info['burstEffectTexts']) return '-';
+	return Localize.traditionalize(info['burstEffectTexts'][0]);
 };
 
 Localize.guard = function (info) {
@@ -2526,15 +2592,15 @@ Localize.desc = function (desc) {
 	if (!info) {
 		debugger;
 		return desc;
-	}
+	}ƒ
 	var map = {
-		'const': info[Localize.suffix('constEffectTexts')],
-		'spell': info[Localize.suffix('spellEffectTexts')],
-		'arts': info[Localize.suffix('artsEffectTexts')],
-		'burst': info[Localize.suffix('burstEffectTexts')],
-		'startup': info[Localize.suffix('startUpEffectTexts')],
-		'action': info[Localize.suffix('actionEffectTexts')],
-		'attached': info[Localize.suffix('attachedEffectTexts')]
+		'const': info['constEffectTexts'],
+		'spell': info['spellEffectTexts'],
+		'arts': info['artsEffectTexts'],
+		'burst': info['burstEffectTexts'],
+		'startup': info['startUpEffectTexts'],
+		'action': info['actionEffectTexts'],
+		'attached': info['attachedEffectTexts']
 	};
 	if (!map[type] || !map[type][idx]) {
 		debugger;

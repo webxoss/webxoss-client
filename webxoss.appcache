@@ -9,8 +9,10 @@ ImageAndDetail.min.js
 webxoss.js
 css.css
 CardInfo.js
-CardInfo_ru.js
-CardInfo_ko.js
+lang/CardInfo_en.json
+lang/CardInfo_zh_CN.json
+lang/CardInfo_ru.json
+lang/CardInfo_ko.json
 
 # DeckEditor #
 DeckEditor/

@@ -2592,7 +2592,7 @@ Localize.desc = function (desc) {
 	if (!info) {
 		debugger;
 		return desc;
-	}ƒ
+	}
 	var map = {
 		'const': info['constEffectTexts'],
 		'spell': info['spellEffectTexts'],

@@ -856,14 +856,16 @@ $('link-edit-deck').onclick = function (event) {
 	return false;
 };
 
-$('room-name').onblur = function (event) {
-	var roomName = event.target.value;
+$('room-name-form').onsubmit = function (event) {
+	var roomName = $('room-name').value;
 	if (roomName) {
 		socket.emit('renameRoom', {
 			'roomName': roomName
 		});
 	}
-};
+	event.preventDefault();
+	return false;
+}
 
 /* 直播 */
 var stopFetchingLive = 0;

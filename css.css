@@ -415,6 +415,9 @@ ol,ul,li {
 	color: #f2442b;
 	font-size: 150%;
 	font-weight: bold;
+	text-align: center;
+	background: transparent;
+	border: none;
 }
 #room-host-nickname {
 	color: #77d25b;

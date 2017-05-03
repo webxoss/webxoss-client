@@ -13,7 +13,7 @@
 		if (window.location != window.parent.location) window.parent.location = window.location;
 		// recieve migrated localStorage
 		(function () {
-			debugger
+
 			var storageJson = location.href.split('#storage=')[1]
 			if (storageJson && localStorage.getItem('migrated') !== '2') {
 				try {
@@ -121,7 +121,7 @@
 					<tr>
 						<td colspan="100">
 							<form id="room-name-form">
-								<input id="room-name" type="text"></input>
+								<input id="room-name" type="text" maxlength="15"></input>
 							</form>
 						</td>
 					</tr>

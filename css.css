@@ -418,6 +418,7 @@ ol,ul,li {
 	text-align: center;
 	background: transparent;
 	border: none;
+	widows: 15em;
 }
 #room-host-nickname {
 	color: #77d25b;

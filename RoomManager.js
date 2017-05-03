@@ -609,6 +609,9 @@ function updateRoom (msgObj) {
 	}
 
 	$('room-name').value = msgObj.roomName;
+	if (!isHost()) {
+		$('room-name').readOnly = true;
+	}
 	$('room-host-nickname').textContent = msgObj.host;
 	$('room-guest-nickname').textContent = msgObj.guest;
 	setClass($('room-guest-nickname'),'ready',msgObj.guestReady);

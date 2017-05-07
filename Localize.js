@@ -161,7 +161,8 @@ var map_zh_CN = {
 		'PUT_TO_CHECK_ZONE': '放置到检查区',
 		'PUT_TO_ENER_ZONE': '放置到能量区',
 		'CONFIRM_REFRESH_SELF': '我方卡组重构\n请确认废弃区',
-		'CONFIRM_REFRESH_OPPONENT': '对方卡组重构\n请确认废弃区'
+		'CONFIRM_REFRESH_OPPONENT': '对方卡组重构\n请确认废弃区',
+		'GUESS_TRAP': '持有陷阱标记？',
 	},
 	'noOptions': {
 		'TARGET': '没有目标'
@@ -171,6 +172,8 @@ var map_zh_CN = {
 		'SUMMON_SIGNI_ZONE': '取消'
 	},
 	'gameText': {
+		'YES': '是',
+		'NO': '否',
 		'white': '白色',
 		'black': '黑色',
 		'red': '红色',
@@ -526,7 +529,8 @@ var map_en = {
 		'PUT_TO_CHECK_ZONE': 'Put to Check Zone',
 		'PUT_TO_ENER_ZONE': 'Put to Ener Zone',
 		'CONFIRM_REFRESH_SELF': 'Deck refesh\nConfirm your trash',
-		'CONFIRM_REFRESH_OPPONENT': 'Deck refesh\nConfirm opponent\'s trash'
+		'CONFIRM_REFRESH_OPPONENT': 'Deck refesh\nConfirm opponent\'s trash',
+		'GUESS_TRAP': 'Is trap?',
 	},
 	'noOptions': {
 		'TARGET': 'No targets'
@@ -536,6 +540,8 @@ var map_en = {
 		'SUMMON_SIGNI_ZONE': 'Cancel'
 	},
 	'gameText': {
+		'YES': 'Yes',
+		'NO': 'No',
 		'white': 'white',
 		'black': 'black',
 		'red': 'red',
@@ -896,7 +902,8 @@ var map_jp = {
 		'PUT_TO_CHECK_ZONE': 'チェックゾーンに置く',
 		'PUT_TO_ENER_ZONE': 'エナゾーンに置く',
 		'CONFIRM_REFRESH_SELF': 'リフレッシュ\nあなたのトラッシュを確認',
-		'CONFIRM_REFRESH_OPPONENT': 'リフレッシュ\n相手のトラッシュを確認'
+		'CONFIRM_REFRESH_OPPONENT': 'リフレッシュ\n相手のトラッシュを確認',
+		'GUESS_TRAP': 'Is trap?',
 	},
 	'noOptions': {
 		// 'SPELL_CUT_IN': 'カットインできません',
@@ -916,6 +923,8 @@ var map_jp = {
 		'SEEK': '探さない'
 	},
 	'gameText': {
+		'YES': 'はい',
+		'NO': 'いいえ',
 		'white': '白',
 		'black': '黒',
 		'red': '赤',
@@ -1279,7 +1288,8 @@ var map_ru = {
 		'PUT_TO_CHECK_ZONE': 'Поместить в зону проверки',
 		'PUT_TO_ENER_ZONE': 'Поместить в энер-зону',
 		'CONFIRM_REFRESH_SELF': 'Обновление колоды\nОзнакомьтесь со сбросом',
-		'CONFIRM_REFRESH_OPPONENT': 'Обновление колоды\nОзнакомьтесь со сбросом'
+		'CONFIRM_REFRESH_OPPONENT': 'Обновление колоды\nОзнакомьтесь со сбросом',
+		'GUESS_TRAP': 'Is trap?',
 	},
 	'noOptions': {
 		'TARGET': 'Нет целей'
@@ -1289,6 +1299,8 @@ var map_ru = {
 		'SUMMON_SIGNI_ZONE': 'Отмена'
 	},
 	'gameText': {
+		'YES': 'Yes',
+		'NO': 'No',
 		'white': 'белая',
 		'black': 'чёрная',
 		'red': 'красная',
@@ -1644,7 +1656,8 @@ var map_it = {
 		'PUT_TO_CHECK_ZONE': 'Sposta nella Check Zone',
 		'PUT_TO_ENER_ZONE': 'Sposta nella Ener Zone',
 		'CONFIRM_REFRESH_SELF': 'Deck refresh\nConferma',
-		'CONFIRM_REFRESH_OPPONENT': 'Deck refresh avversario\nConferma'
+		'CONFIRM_REFRESH_OPPONENT': 'Deck refresh avversario\nConferma',
+		'GUESS_TRAP': 'Is trap?',
 	},
 	'noOptions': {
 		'TARGET': 'Nessun bersaglio'
@@ -1654,6 +1667,8 @@ var map_it = {
 		'SUMMON_SIGNI_ZONE': 'Cancella'
 	},
 	'gameText': {
+		'YES': 'Yes',
+		'NO': 'No',
 		'white': 'white',
 		'black': 'black',
 		'red': 'red',
@@ -2014,7 +2029,8 @@ var map_ko = {
     'PUT_TO_CHECK_ZONE': '체크 존에 두기',
     'PUT_TO_ENER_ZONE': '에나 존에 두기',
     'CONFIRM_REFRESH_SELF': '리프레시\n당신의 트래시를 확인',
-    'CONFIRM_REFRESH_OPPONENT': '리프레시\n상대의 트래시를 확인'
+    'CONFIRM_REFRESH_OPPONENT': '리프레시\n상대의 트래시를 확인',
+		'GUESS_TRAP': 'Is trap?',
   },
   'noOptions': {
     // 'SPELL_CUT_IN': 'カットインできません',
@@ -2035,6 +2051,8 @@ var map_ko = {
     'SEEK': '찾지 않는다'
   },
   'gameText': {
+		'YES': 'Yes',
+		'NO': 'No',
     'white': '백',
     'black': '흑',
     'red': '적',

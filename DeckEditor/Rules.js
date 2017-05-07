@@ -20,7 +20,8 @@ TextualRule.prototype.parse = function (words) {
 	return function filter (info) {
 		if (!keywords.length) return true;
 		return keywords.some(function (keyword) {
-			var value = info[prop].toLowerCase();
+			if (info[prop] && typeof info[prop] !== 'string') info[prop] = true;
+			var value = ('' + info[prop]).toLowerCase();
 			if (exact) {
 				return value === keyword;
 			} else {
@@ -43,10 +44,10 @@ TextualRule.prototype.parseWord = function (word) {
 ///////////////////////////////////////////////////////////////
 //
 //  枚举型规则,包括:
-//    ColorRule,TypeRule,RarityRule
+//    ColorRule,TypeRule,RarityRule,RiseRule,TrapRule,AcceRule
 //  匹配例子:
 //    "白 LRIG SR 红"
-//    "白色 精灵 lr red"
+//    "白色 精灵 lr red rise"
 //
 ///////////////////////////////////////////////////////////////
 var ColorRule = new TextualRule('color',{
@@ -73,6 +74,15 @@ var RarityRule = new TextualRule('rarity',{
 	'st': ['st'],
 	'pr': ['pr'],
 	'sp': ['sp']
+},true);
+var RiseRule = new TextualRule('rise',{
+	'true': ['rise','升阶','ライズ'],
+},true);
+var TrapRule = new TextualRule('trap',{
+	'true': ['trap','陷阱','陷阱标记','トラップ'],
+},true);
+var AcceRule = new TextualRule('acce',{
+	'true': ['acce','accessory','附属','アクセ'],
 },true);
 
 ///////////////////////////////////////////////////////////////

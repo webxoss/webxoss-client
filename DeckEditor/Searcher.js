@@ -1,9 +1,5 @@
 'use strict';
 function Searcher () {
-	this.infos = [];
-	for (var pid in CardInfo) {
-		this.infos.push(CardInfo[pid]);
-	}
 	this.rules = [
 		ColorRule,
 		CrossRule,
@@ -30,7 +26,10 @@ Searcher.prototype.search = function (str) {
 	var filters = this.rules.map(function (rule) {
 		return rule.parse(words);
 	},this);
+	var infos = Object.keys(CardInfo).map(function (pid) {
+		return CardInfo[pid];
+	});
 	return filters.reduce(function (results,filter) {
 		return results.filter(filter);
-	},this.infos);
+	},infos);
 };

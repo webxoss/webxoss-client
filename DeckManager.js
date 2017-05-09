@@ -162,6 +162,7 @@ DeckManager.prototype.checkMayusRoom = function (pids) {
 		37: 2,  // <忘得ぬ幻想　ヴァルキリー>
 		34: 2,  // <修復>
 		178: 2, // <先駆の大天使　アークゲイン>
+		1501: 2, // <幻竜　アパト>
 		534: 1, // <ロック・ユー>
 		// 689: 1, // <ＲＡＩＮＹ>
 		474: 0, // <ノー・ゲイン>
@@ -169,6 +170,7 @@ DeckManager.prototype.checkMayusRoom = function (pids) {
 		689: 0, // <ＲＡＩＮＹ>
 		1030: 0, // <四面楚火>
 		1457: 0, // <サーバント　Ｚ>
+		1212: 0, // <コードアート　Ｃ・Ｌ>
 	};
 	for (var i = 0; i < infos.length; i++) {
 		var info = infos[i];

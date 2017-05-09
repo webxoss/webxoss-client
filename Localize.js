@@ -196,6 +196,7 @@ var map_zh_CN = {
 		'HAND': '手牌',
 		'SIGNI_ZONE': '精灵区',
 		'TRASH_ZONE': '废弃区',
+		'ENER_ZONE': '能量区',
 		'LIFE_CLOTH': '生命护甲',
 		'SELECT_DONE': '完成选择'
 	},
@@ -564,6 +565,7 @@ var map_en = {
 		'HAND': 'Hand',
 		'SIGNI_ZONE': 'SIGNI Zone',
 		'TRASH_ZONE': 'Trash Zone',
+		'ENER_ZONE': 'Ener Zone',
 		'LIFE_CLOTH': 'Life Cloth',
 		'SELECT_DONE': 'End select'
 	},
@@ -947,6 +949,7 @@ var map_jp = {
 		'HAND': '手札',
 		'SIGNI_ZONE': 'シグニゾーン',
 		'TRASH_ZONE': 'トラッシュ',
+		'ENER_ZONE': 'エナゾーン',
 		'LIFE_CLOTH': 'ライフクロス',
 		'SELECT_DONE': '選択完成'
 	},
@@ -1323,6 +1326,7 @@ var map_ru = {
 		'HAND': 'руку',
 		'SIGNI_ZONE': 'Зону Записей',
 		'TRASH_ZONE': 'сброс',
+		'ENER_ZONE': 'энер-зону',
 		'LIFE_CLOTH': 'Жизненная материя',
 		'SELECT_DONE': 'Завершить'
 	},
@@ -1691,6 +1695,7 @@ var map_it = {
 		'HAND': 'Hand',
 		'SIGNI_ZONE': 'SIGNI Zone',
 		'TRASH_ZONE': 'Trash Zone',
+		'ENER_ZONE': 'Ener Zone',
 		'LIFE_CLOTH': 'Life Cloth',
 		'SELECT_DONE': 'Termina'
 	},
@@ -2075,6 +2080,7 @@ var map_ko = {
 		'HAND': 'Hand',
 		'SIGNI_ZONE': 'SIGNI Zone',
 		'TRASH_ZONE': 'Trash Zone',
+		'ENER_ZONE': '에나 존에',
     'LIFE_CLOTH': '라이프 클로스',
     'SELECT_DONE': '선택 완료'
   },
@@ -2335,7 +2341,7 @@ function Localize (namespace,label) {
 		debugger;
 		return label;
 	}
-	var str = textMap[label];
+	var str = textMap[label] || Localize.map.common[label];
 	if (!str) {
 		console.warn('no such label: "' + label + '" .');
 		debugger;

@@ -1,7 +1,7 @@
-Cards:
-	Newly Added: WD17 && WD18.
+﻿Cards:
+	Newly Added: WX15.
 	Pre-built Deck: WD01~WD18
-	Booster Packs: WX01~WX14
+	Booster Packs: WX01~WX15
 	PR Cards:
 		001-120
 		123-148
@@ -20,14 +20,18 @@ Cards:
 		237-238
 		240-266
 		268-295
-		297-304
-		306-307
-		309-310
-		312-321
-	SP Cards: SP01~SP03, SP06~SP07, SP10, SP17~SP19
-	Total: 1934 cards
+		297-310
+		312-327
+		330-332
+		340-347
+		350-353
+	SP Cards: SP01~SP03, SP06~SP07, SP10, SP17~SP20
+	Total: 2101 cards
 
 Versions:
+<火竜点睛> (2017-05-10)
+  + Add cards: WX15 cards.
+
 <決死の記憶　リル> (2017-04-02)
   - Remove WXB cards. It's an april fool.
 

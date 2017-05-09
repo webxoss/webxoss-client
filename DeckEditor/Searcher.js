@@ -29,9 +29,10 @@ Searcher.prototype.search = function (str) {
 	var filters = this.rules.map(function (rule) {
 		return rule.parse(words);
 	},this);
-	var infos = Object.keys(CardInfo).map(function (pid) {
-		return CardInfo[pid];
-	});
+	var infos = [];
+	for (var pid in CardInfo) {
+		infos.push(CardInfo[pid]);
+	}
 	return filters.reduce(function (results,filter) {
 		return results.filter(filter);
 	},infos);

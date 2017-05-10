@@ -1,39 +1,14 @@
 <!DOCTYPE html>
 <html manifest="webxoss.appcache">
 <head>
-  <title>Migrate WEBXOSS data</title>
+  <title>WEBXOSS</title>
+  <meta http-equiv="refresh" content="0; url=https://webxoss.com/" />
+  <link rel="canonical" href="https://webxoss.com/">
 </head>
 <body>
-  <iframe id="iframe" style="display: none;" src="about:blank"></iframe>
+  <p>Redirecting to <a href="https://webxoss.com/">https://webxoss.com/</a> ...</p>
   <script>
-(function () {
-  if (location.protocol === 'https:') {
-    return
-  }
-  // migrated by the old way, buggy in safari
-  if (localStorage.getItem('migrated') === 'true') {
-    if (!window.safari) {
-      return location.replace(location.href.replace(/^http:/, 'https:'))
-    }
-  }
-  // migrated by the new way
-  if (localStorage.getItem('migrated') === '2') {
-    return location.replace(location.href.replace(/^http:/, 'https:'))
-  }
-  function getStorage() {
-    var storage = {}
-    for (var i = 0; i < localStorage.length; i++) {
-      var key = localStorage.key(i)
-      storage[key] = localStorage.getItem(key)
-    }
-    return storage
-  }
-  var storage = getStorage()
-  localStorage.setItem('migrated', 2)
-  // pass localStorage via url hash, which is ignored in network request
-  var url = location.href.replace(/^http:/, 'https:') + '#storage=' + JSON.stringify(storage)
-  return location.replace(url)
-})()
+    window.location.replace('https://webxoss.com/')
   </script>
 </body>
 </html>

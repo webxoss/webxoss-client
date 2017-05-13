@@ -318,7 +318,10 @@ LimitingRule.parse = function (words) {
 			},this);
 		}
 		if (!info.limiting) return flagNoLimiting;
-		return inArr(info.limiting,matchedClasses);
+		var limitings = info.limiting.split('/');
+		return limitings.some(function (limiting) {
+			return inArr(limiting,matchedClasses);
+		});
 	};
 };
 

@@ -979,6 +979,7 @@ function playReplayContent (content) {
 	}
 	playingReplay = true;
 	gameStart('replay');
+	game.io.datas = content.messagePacks;
 	var i = 0;
 	var idle = true;
 	var auto = false;

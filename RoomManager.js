@@ -988,6 +988,7 @@ function playReplayContent (content) {
 		if (i >= content.messagePacks.length) {
 			$('button-replay-auto').onclick = null;
 			$('button-replay-step').onclick = null;
+			$('button-replay-save').onclick = null;
 			if (content.surrender) {
 				if (content.win) {
 					game.win(true);
@@ -1014,6 +1015,23 @@ function playReplayContent (content) {
 		}
 		step();
 	};
+	$('button-replay-save').onclick = function (event) {
+		event.preventDefault();
+		var a = document.createElement('a');
+		var blob = objToBlob(createReplayObj(
+			content.messagePacks,
+			content.win,
+			content.surrender
+		));
+		var url = blobToUrl(blob);
+		var time = (new Date()).toISOString().replace('T',' ').substr(0,19).replace(/:/g,'-');
+		var filename = time + '.wxrep';
+		a.href = url;
+		a.download = filename;
+		a.click();
+		window.URL.revokeObjectURL(url);
+	};
+
 	function step () {
 		if (!idle) return;
 		idle = false;

@@ -348,6 +348,7 @@ var map_zh_CN = {
 			// 'label-deck': '牌组:',
 			'button-replay-step': '下一步',
 			'button-replay-auto': '自动播放',
+			'button-replay-save': '保存录像',
 			'span-surrender': '投降',
 			'span-leave-game': '离开',
 			'chat-input': {
@@ -725,6 +726,7 @@ var map_en = {
 			// 'label-deck': 'Deck:',
 			'button-replay-step': 'STEP',
 			'button-replay-auto': 'AUTO',
+			'button-replay-save': 'DOWNLOAD',
 			'span-surrender': 'Surrender',
 			'span-leave-game': 'Leave',
 			'chat-input': {
@@ -1122,6 +1124,7 @@ var map_jp = {
 			// 'label-deck': 'デッキ:',
 			'button-replay-step': 'STEP',
 			'button-replay-auto': 'AUTO',
+			'button-replay-save': 'DOWNLOAD',
 			'span-surrender': '投了する',
 			'span-leave-game': '戻る',
 			'chat-input': {
@@ -1502,6 +1505,7 @@ var map_ru = {
 			// 'label-deck': 'Колода:',
 			'button-replay-step': 'ДАЛЕЕ',
 			'button-replay-auto': 'АВТО',
+			'button-replay-save': 'DOWNLOAD',
 			'span-surrender': 'Сдаться',
 			'span-leave-game': 'Выйти',
 			'chat-input': {
@@ -1879,6 +1883,7 @@ var map_it = {
 			// 'label-deck': 'Deck:',
 			'button-replay-step': 'STEP',
 			'button-replay-auto': 'AUTO',
+			'button-replay-save': 'DOWNLOAD',
 			'span-surrender': 'Resa',
 			'span-leave-game': 'Abbandona',
 			'chat-input': {
@@ -2277,6 +2282,7 @@ var map_ko = {
       // 'label-deck': 'デッキ:',
       'button-replay-step': 'STEP',
       'button-replay-auto': 'AUTO',
+			'button-replay-save': 'DOWNLOAD',
       'span-surrender': '항복하기',
       'span-leave-game': '돌아가기',
       'chat-input': {

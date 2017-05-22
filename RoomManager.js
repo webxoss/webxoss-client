@@ -608,7 +608,10 @@ function updateRoom (msgObj) {
 		audio.playSoundEffect('JoinRoom');
 	}
 
-	$('room-name').textContent = msgObj.roomName;
+	$('room-name').value = msgObj.roomName;
+	if (!isHost()) {
+		$('room-name').readOnly = true;
+	}
 	$('room-host-nickname').textContent = msgObj.host;
 	$('room-guest-nickname').textContent = msgObj.guest;
 	setClass($('room-guest-nickname'),'ready',msgObj.guestReady);
@@ -855,6 +858,17 @@ $('link-edit-deck').onclick = function (event) {
 	event.preventDefault();
 	return false;
 };
+
+$('room-name-form').onsubmit = function (event) {
+	var roomName = $('room-name').value;
+	if (roomName) {
+		socket.emit('renameRoom', {
+			'roomName': roomName
+		});
+	}
+	event.preventDefault();
+	return false;
+}
 
 /* 直播 */
 var stopFetchingLive = 0;

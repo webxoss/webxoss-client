@@ -859,6 +859,16 @@ $('link-edit-deck').onclick = function (event) {
 	return false;
 };
 
+$('room-name').onblur = function () {
+	var roomName = $('room-name').value;
+	if (roomName) {
+		socket.emit('renameRoom', {
+			'roomName': roomName
+		});
+	}
+	return false;
+}
+
 $('room-name-form').onsubmit = function (event) {
 	var roomName = $('room-name').value;
 	if (roomName) {

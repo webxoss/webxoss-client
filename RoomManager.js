@@ -859,26 +859,22 @@ $('link-edit-deck').onclick = function (event) {
 	return false;
 };
 
-$('room-name').onblur = function () {
-	var roomName = $('room-name').value;
-	if (roomName) {
+/* 重命名房间名 */
+var oldRoomName = '';
+function handleRenameRoom (event) {
+	var name = $('room-name').value;
+	if (name && name !== oldRoomName ) {
 		socket.emit('renameRoom', {
-			'roomName': roomName
+			'roomName': name
 		});
-	}
-	return false;
-}
-
-$('room-name-form').onsubmit = function (event) {
-	var roomName = $('room-name').value;
-	if (roomName) {
-		socket.emit('renameRoom', {
-			'roomName': roomName
-		});
+		oldRoomName = name; 
 	}
 	event.preventDefault();
 	return false;
 }
+
+$('room-name').onblur = handleRenameRoom
+$('room-name-form').onsubmit = handleRenameRoom
 
 /* 直播 */
 var stopFetchingLive = 0;

@@ -94,7 +94,8 @@ var map_zh_CN = {
 		'CROSS_AND': '【CROSS】%s的左侧 和 %s的右侧',
 		'CROSS_OR': '或',
 		'GUARD_DESCRIPTION': '【防御】（从手牌舍弃此牌，将分身的1次攻击无效化）',
-		'MULTI_ENER_DESCRIPTION': '【常】：【万花色】（支付费用时，这张牌视为持有所有颜色）'
+		'MULTI_ENER_DESCRIPTION': '【常】：【万花色】（支付费用时，这张牌视为持有所有颜色）',
+		'LAYER_DESCRIPTION': '[レイヤー] なたのすべての＜怪異＞のシグニは《レイヤーア》の能力を得る',
 	},
 	'buttonTitle': {
 		'OK': '确定',
@@ -473,7 +474,8 @@ var map_en = {
 		'CROSS_AND': '>Cross< %s Right and %s Left',
 		'CROSS_OR': ' or ',
 		'GUARD_DESCRIPTION': '[Guard] (By discarding this card from your hand, disable one of a LRIG\'s attacks)',
-		'MULTI_ENER_DESCRIPTION': '[Constant]: [Multi Ener] (When you pay a cost, treat this card as if it has all colors)'
+		'MULTI_ENER_DESCRIPTION': '[Constant]: [Multi Ener] (When you pay a cost, treat this card as if it has all colors)',
+		'LAYER_DESCRIPTION': '(Layer) All of your <Apparition> SIGNI get this [Layer] ability.',
 	},
 	'buttonTitle': {
 		'OK': 'OK',
@@ -852,7 +854,8 @@ var map_jp = {
 		'CROSS_AND': '【クロス】%sの左 かつ %sの右',
 		'CROSS_OR': 'か',
 		'GUARD_DESCRIPTION': '【ガード】（このカードを手札から捨てることで、ルリグの攻撃を一度無効にする）',
-		'MULTI_ENER_DESCRIPTION': '【常時能力】：【マルチエナ】（コストを支払う際に、このカードは全ての色を持つかのように扱う）'
+		'MULTI_ENER_DESCRIPTION': '【常時能力】：【マルチエナ】（コストを支払う際に、このカードは全ての色を持つかのように扱う）',
+		'LAYER_DESCRIPTION': '[レイヤー] なたのすべての＜怪異＞のシグニは《レイヤーア》の能力を得る',
 	},
 	'buttonTitle': {
 		'OK': 'OK',
@@ -1254,7 +1257,8 @@ var map_ru = {
 		// 'CROSS_LEFT': '>Связь< слева от "%s"',
 		// 'CROSS_RIGHT': '>Связь< справа от "%s"',
 		'GUARD_DESCRIPTION': '[Защита] (Сбросив эту карту со своей руки, отмените атаку одной ИДЕЛ.)',
-		'MULTI_ENER_DESCRIPTION': '[Постоянно]: [Мульти-энер] (Когда Вы платите цену, считается, что эта карта относится ко всем цветам.)'
+		'MULTI_ENER_DESCRIPTION': '[Постоянно]: [Мульти-энер] (Когда Вы платите цену, считается, что эта карта относится ко всем цветам.)',
+		'LAYER_DESCRIPTION': '(Layer) All of your <Apparition> SIGNI get this [Layer] ability.',
 	},
 	'buttonTitle': {
 		'OK': 'OK',
@@ -1633,7 +1637,8 @@ var map_it = {
 		'CROSS_AND': '>Cross< %s Right and %s Left',
 		'CROSS_OR': ' o ',
 		'GUARD_DESCRIPTION': '[Guard] (Scartando questa carta dalla tua mano annulla un attacco di una LRIG)',
-		'MULTI_ENER_DESCRIPTION': '[Constant]: [Multi Ener] (Mentre paghi un costo tratta questa carta come se fosse di un qualsiasi colore)'
+		'MULTI_ENER_DESCRIPTION': '[Constant]: [Multi Ener] (Mentre paghi un costo tratta questa carta come se fosse di un qualsiasi colore)',
+		'LAYER_DESCRIPTION': '(Layer) All of your <Apparition> SIGNI get this [Layer] ability.',
 	},
 	'buttonTitle': {
 		'OK': 'OK',
@@ -2012,7 +2017,8 @@ var map_ko = {
     'CROSS_AND': '[크로스]%s의 왼쪽과  %s의 오른쪽',
     'CROSS_OR': '또는',
     'GUARD_DESCRIPTION': '[가드]（이 카드를 패에서 버리는 것으로, 루리그의 공격을 한 번 무효로 한다.）',
-    'MULTI_ENER_DESCRIPTION': '[상시]：[멀티에나]（코스트를 지불할 때, 이 카드는 모든 색을 가진것 처럼 취급한다.）'
+    'MULTI_ENER_DESCRIPTION': '[상시]：[멀티에나]（코스트를 지불할 때, 이 카드는 모든 색을 가진것 처럼 취급한다.）',
+		'LAYER_DESCRIPTION': '(Layer) All of your <Apparition> SIGNI get this [Layer] ability.',
   },
   'buttonTitle': {
     'OK': '확인',
@@ -2586,6 +2592,10 @@ Localize.effectTexts = function (info) {
 	// 万花
 	if (info.multiEner) {
 		texts.push(Localize('_misc','MULTI_ENER_DESCRIPTION'));
+	}
+	// 万花
+	if (info.layer) {
+		texts.push(Localize('_misc','LAYER_DESCRIPTION'));
 	}
 	// CROSS
 	function toNames (cross) {

@@ -224,7 +224,7 @@ Game.prototype.handlePayEner = function (msg) {
 			game.input('PAY_ENER',null);
 		}
 	}
-	this.dialog.selectEner(Localize('buttonTitle','PAY_ENER'),cards,msg.colors,msg,function (selectedIndexes) {
+	this.dialog.selectEner(Localize('buttonTitle','PAY_ENER'),cards,msg.integers,msg,function (selectedIndexes) {
 		game.input('PAY_ENER',selectedIndexes);
 	},onCancel);
 	return true;

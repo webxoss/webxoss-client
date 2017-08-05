@@ -391,66 +391,65 @@ Dialog.prototype.selectSomeCards = function (title,cards,arg,callback) {
 	},callbackCancel);
 };
 
-Dialog.prototype.selectEner = function (title,cards,colors,cost,callback,onCancel) {
+Dialog.prototype.selectEner = function (title,cards,integers,cost,callback,onCancel) {
+	function checkRequirements(items, requirements) {
+		var n = requirements.length
+		var len = 1 << n
+		var arr = (typeof Uint8Array === 'undefined') ? new Array(len) : new Uint8Array(len)
+		// 第 i 条不等式。
+		// 假设 n == 4，即有 4 种元需求：
+		// i 为从 0000 到 1111，从右到左分别称为第 1,2,3,4 位
+		// 当 i == 0110 时，代表不等式左边为第 2、3 个集合的并集
+		for (var i = 0; i < len; i++) {
+			var filters = []
+			for (var j = 0; j < n; j++) {
+				if (i & (1 << j)) {
+					filters.push(requirements[j].filter)
+					// 不等式的右边（先把需求数加上去，满足的时候减 1，减至 0 则满足该不等式）
+					arr[i] += requirements[j].count
+				}
+			}
+			// 遍历能量区，满足条件的减 1
+			for (var j = 0; j < items.length; j++) {
+				var item = items[j]
+				if (filters.some(function (filter) {
+					return filter(item)
+				})) {
+					// 减至 0，该不等式成立
+					if (!--arr[i]) break
+				}
+			}
+			if (arr[i]) return false
+		}
+		return true
+	}
+
+	var total = 0;
+	var requirements = cost.requirements.map(function (requirement) {
+		total += requirement.count;
+		return {
+			count: requirement.count,
+			mask: requirement.mask,
+			filter: function (int) {
+				return int & requirement.mask;
+			},
+		};
+	});
+	function onSelectChange (selectedIndexes,disable) {
+		var selectedIntegers = selectedIndexes.map(function (index) {
+			return integers[index]
+		});
+		var ok = (selectedIndexes.length === total) && checkRequirements(selectedIntegers,requirements);
+		if (ok) {
+			integers.forEach(function (_,index) {
+				disable(index);
+			});
+		}
+		return ok;
+	};
+
 	var texts = cards.map(function (card) {
 		return card.sid === cost.source ? 'WARN' : '';
 	},this);
 	this.selectCardAdvanced(title,cards,texts,false,false,onSelectChange,callback,onCancel);
-
-	function onSelectChange (selectedIndexes,disable) {
-		var need = {};
-		var total = 0;
-		['colorless','white','black','red','blue','green','multi'].forEach(function (color) {
-			need[color] = cost[color] || 0;
-			total += need[color];
-		},this);
-
-		if (selectedIndexes.length >= total) {
-			cards.forEach(function (card,idx) {
-				disable(idx);
-			},this);
-			return true;
-		}
-
-		var colorSets = [];
-		selectedIndexes.forEach(function (idx) {
-			var color = colors[idx];
-			if (color === 'multi') return;
-			if (isArr(color)) {
-				// 多重颜色,延迟考虑
-				colorSets.push(color);
-				return
-			}
-			if (need[color] > 0) {
-				need[color] -= 1;
-			} else {
-				need.colorless -= 1;
-			}
-		},this);
-		// 多重颜色
-		colorSets.forEach(function (colorSet) {
-			for (var i = 0; i < colorSet.length; i++) {
-				var color = colorSet[i];
-				if (need[color] > 0) {
-					need[color] -= 1;
-					return;
-				}
-			}
-			need.colorless -= 1;
-		});
-
-		if (need.colorless > 0) return false;
-
-		cards.forEach(function (card,idx) {
-			var color = colors[idx];
-			if (color === 'multi') return;
-			if (isArr(color)) {
-				if (color.some(function (color) {
-					return need[color] > 0;
-				})) return;
-				return disable(idx);
-			}
-			if (!need[color]) disable(idx);
-		},this);
-	}
 };

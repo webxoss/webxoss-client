@@ -1,0 +1,3 @@
+[submodule "background"]
+	path = background
+	url = https://github.com/webxoss/webxoss-assets.git

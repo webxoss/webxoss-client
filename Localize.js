@@ -25,6 +25,7 @@ window.Localize = (function () {
 	window.CardInfo_ko = Object.create(CardInfo);
 	window.CardInfo_ru = Object.create(CardInfo);
 	window.CardInfo_it = Object.create(CardInfo);
+	window.CardInfo_sp = Object.create(CardInfo);
 	var dir = location.pathname.match(/\/DeckEditor\/?$/) ? '../lang/' : './lang/'
 	get(dir + 'CardInfo_en.json', function (translation) {
 		for (var pid in translation) {
@@ -65,6 +66,16 @@ window.Localize = (function () {
 				info[prop] = tran[prop];
 			}
 			window.CardInfo_ko[pid] = info;
+		}
+	})
+	get(dir + 'CardInfo_sp.json', function (translation) {
+		for (var pid in translation) {
+			var tran = translation[pid];
+			var info = Object.create(CardInfo_jp[pid]);
+			for (var prop in tran) {
+				info[prop] = tran[prop];
+			}
+			window.CardInfo_sp[pid] = info;
 		}
 	})
 })();
@@ -2394,6 +2405,386 @@ var map_ko = {
   }
 };
 
+var map_sp = {
+  common: {
+    'OK': 'OK',
+    'CANCEL': 'CANCELAR',
+    'NO_CARDS': 'Sin cartas',
+    'or': 'o'
+  },
+  _misc: {
+    'DIALOG_TITLE_EFFECTS': 'Multiples efectos se han disparado.\nEscoge uno para resolver.',
+    // 'NO_TARGET': 'Sin objetivos',
+    'NO_OPTIONS': 'No es posible %s',
+    // 'GIVE_UP_TARGET': 'No seleccionar',
+    'GIVE_UP': 'No %s',
+    'GUARD_TRUE': 'Si',
+    'GUARD_FALSE': 'No',
+    'LIMITING': 'Limitado a %s',
+    'WAIT': 'Esperando...',
+    'CLASS_SEPARATOR': ':\n',
+    'CROSS_NAME_QUOTE_LEFT': '"',
+    'CROSS_NAME_QUOTE_RIGHT': '"',
+    'CROSS_LEFT': '>Cross< %s Izquierda',
+    'CROSS_RIGHT': '>Cross< %s Derecha',
+    'CROSS_AND': '>Cross< %s Derecha y %s Izquierda',
+    'CROSS_OR': ' o ',
+    'GUARD_DESCRIPTION': '[Guardia] (Al descartar esta carta de tu mano, deshabilita el ataque de una LRIG)',
+    'MULTI_ENER_DESCRIPTION': '[Constante]: [Multi Ener] (Cuando pagues un costo, trata esta carta como si tuviera todos los colores)',
+    'LAYER_DESCRIPTION': '(Layer) Todos tus SIGNI <Aparición> obtienen esta habilidad [Layer].',
+  },
+  'buttonTitle': {
+    'OK': 'OK',
+    'CANCEL': 'CANCELAR',
+    'LEVEL0_LRIG': 'Colocar LRIG',
+    'DISCARD_AND_REDRAW': 'Mulligan',
+    'CHARGE': 'Cargar',
+    'GROW': 'Crecer',
+    'SUMMON_SIGNI': 'Invocar',
+    'SUMMON_SIGNI_ZONE': 'Zona',
+    'BANISH': 'Desterrar',
+    'BOUNCE': 'Rebotar',
+    'TRASH': 'Basura',
+    'TRASH_SIGNI': 'Basura',
+    'USE_SPELL': 'Usar HECHIZO',
+    'SPELL_EFFECT': 'Seleccionar efecto de HECHIZO',
+    'USE_ARTS': 'Usar ARTS',
+    'ARTS_EFFECT': 'Seleccionar efecto de ARTS',
+    'SPELL_CUT_IN': 'Usar Corta-Hechizos',
+    'USE_ACTION_EFFECT': 'Efecto Acción',
+    'SEEK': 'Buscar',
+    'SET_ORDER': 'Establecer orden',
+    'SIGNI_ATTACK': 'Atacar',
+    'LRIG_ATTACK': 'Atacar',
+    'GUARD': 'Usar Guardia',
+    'DISCARD': 'Descartar',
+    'DECLARE': 'Declarar',
+    'PAY': 'Pagar',
+    'PAY_EXCEED': 'Exceed',
+    'DOWN': 'Bajar',
+    'UP': 'Subir',
+    'TARGET': 'Objetivo',
+    'PAY_ENER': 'Pagar Ener',
+    'LAUNCH': 'Lanzar',
+    'EFFECTS': 'Efectos',
+    'CONFIRM': 'Confirmar',
+    'END_SELECT': 'Terminar selección',
+    'END_ENER_PHASE': 'Terminar Fase de Ener',
+    'END_GROW_PHASE': 'Terminar Fase de Crecimiento',
+    'END_MAIN_PHASE': 'Terminar Fase Principal',
+    'END_ARTS_STEP': 'Terminar Fase de ARTS',
+    'END_SIGNI_ATTACK_STEP': 'Terminar Fase de Ataque de SIGNI',
+    'END_LRIG_ATTACK_STEP': ' Terminar Fase de Ataque de LRIG',
+    'VIEW': 'Ver',
+    'ADD_TO_HAND': 'Agregar a la mano',
+    'COLOR': 'Color',
+    'CHOOSE_EFFECT': 'Escoger Efecto',
+    'CHOOSE_ZONE': 'Escoger Zona',
+    'RESET_SIGNI_ZONE': 'Reemplazar',
+    'CHARM_CARD': 'Charm',
+    'TRASH_CHARM': 'Desechar Charm',
+    'REVEAL': 'Revelar',
+    'PUT_TO_TOP': 'Colocar en la parte superior',
+    'PUT_TO_BOTTOM': 'Colocar en la parte inferior',
+    'REVEAL_MORE': 'Revelar más cartas',
+    'PROTECT': 'Proteger',
+    '_SHIRONAKUJI': '-6000',
+    'CLASS': 'clase',
+    'PAY_WHITE_INSTEAD': 'Pagar [Blanco] en su lugar',
+    'TRASH_OSAKI': 'Desechar Osaki',
+    'RESONA': 'Resona',
+    'CRASH': 'Crushear',
+    'PLAYER': 'Jugador',
+    'PUT_TO_CHECK_ZONE': 'Colocar en la Zona de Verificación',
+    'PUT_TO_ENER_ZONE': 'Colocar en la Zona de Ener',
+    'CONFIRM_REFRESH_SELF': 'Refrezcar mazo\nConfirma tu basura.',
+    'CONFIRM_REFRESH_OPPONENT': 'Refrezcar mazo\nConfirma la basura de tu oponente.',
+    'GUESS_TRAP': '¿Es una trampa?',
+    'LEVEL': 'Nivel',
+  },
+  'noOptions': {
+    'TARGET': 'Sin objetivos'
+  },
+  'giveUp': {
+    'TARGET': 'No seleccionar',
+    'SUMMON_SIGNI_ZONE': 'Cancelar'
+  },
+  'gameText': {
+    'YES': 'Si',
+    'NO': 'No',
+    'white': 'blanco',
+    'black': 'negro',
+    'red': 'rojo',
+    'blue': 'azul',
+    'green': 'verde',
+    'colorless': 'incoloro',
+    'ADD_TO_HAND': 'Agregar a la mano',
+    'SUMMON': 'Invocar',
+    'DOWN': 'Bajar',
+    'UP': 'Subir',
+    'SHOW_EFFECTS_DIALOG_TITLE': 'Efecto',
+    'PUT_TO_TOP': 'Colocar en la parte superior',
+    'PUT_TO_BOTTOM': 'Colocar en la parte inferior',
+    'SELF': 'A mí',
+    'OPPONENT': 'Oponente',
+    'PUT_TO_ENER_ZONE': 'Colocar en la Zona de Ener',
+    'CONFIRM_ENCORE': 'Deseas pagar por Encore?',
+    'CONFIRM_BET': 'Deseas apostar?',
+    'MAIN_DECK': 'Mazo Principal',
+    'HAND': 'Mano',
+    'SIGNI_ZONE': 'Zona de SIGNI',
+    'TRASH_ZONE': 'Zona de Basura',
+    'ENER_ZONE': 'Zona de Ener',
+    'LIFE_CLOTH': 'Life Cloth',
+    'SELECT_DONE': 'Terminar de seleccionar'
+  },
+  'prop': {
+    'cardType': 'Tipo',
+    'classes': 'Clase',
+    'level': 'Nivel',
+    'color': 'Color',
+    'limit': 'Limite',
+    'power': 'Poder',
+    'limting': 'Limitación',
+    'guard': 'Guardia',
+    'cost': 'Costo',
+    'timmings': 'Tiempo de Uso',
+    'effects': 'Habilidades',
+    'burst': 'Life Burst'
+  },
+  'cardType': {
+    'LRIG': 'LRIG',
+    'SIGNI': 'SIGNI',
+    'SPELL': 'HECHIZO',
+    'ARTS': 'ARTS',
+    'RESONA': 'RESONA'
+  },
+  'color': {
+    'white': 'Blanco',
+    'black': 'Negro',
+    'red': 'Rojo',
+    'blue': 'Azul',
+    'green': 'Verde',
+    'colorless': 'Incoloro'
+  },
+  'costColor': {
+    'costWhite': 'Blanco',
+    'costBlack': 'Negro',
+    'costRed': 'Rojo',
+    'costBlue': 'Azul',
+    'costGreen': 'Verde',
+    'costColorless': 'Incoloro'
+  },
+  'timming': {
+    'mainPhase': '[Fase Principal]',
+    'attackPhase': '[Fase de Ataque]',
+    'spellCutIn': '[Corta-Hechizos]'
+  },
+  'class': {
+    'タマ': 'Tama',
+    '花代': 'Hanayo',
+    'ユヅキ': 'Yuzuki',
+    'ピルルク': 'Piruluk',
+    'エルドラ': 'Eldora',
+    'ミルルン': 'Mirurun',
+    '緑子': 'Midoriko',
+    'アン': 'Anne',
+    'ウリス': 'Ulith',
+    'イオナ': 'Iona',
+    'ウムル': 'Umuru',
+    'リメンバ': 'Remember',
+    'タウィル': 'Tawil',
+    'サシェ': 'Sashe',
+    'ミュウ': 'Myuu',
+    'アイヤイ': 'Aiyai',
+    'アルフォウ': 'Alfou',
+    'ハナレ': 'Hanare',
+    'リル': 'Ril',
+    'メル': 'Mel',
+    'あや': 'Aya',
+    'ナナシ': 'Nanashi',
+    'ドーナ': 'Donna',
+    'ママ': 'Mama',
+    '精像': 'Imagen',
+    '天使': 'Angel',
+    '悪魔': 'Demonio',
+    '美巧': 'Armonía Artística',
+    '精武': 'Guerra',
+    'アーム': 'Armamento',
+    'ウェポン': 'Arma',
+    '武勇': 'Valor',
+    '調理': 'Cocina',
+    '遊具': 'Zona de Juegos',
+    '毒牙': 'Colmillo Venenoso',
+    '精羅': 'Naturaleza',
+    '鉱石': 'Mineral',
+    '宝石': 'Gema',
+    '植物': 'Planta',
+    '原子': 'Átomo',
+    '宇宙': 'Espacio',
+    '精械': 'Maquinaria',
+    '電機': 'Eléctrica',
+    '古代兵器': 'Arma Antigua',
+    '迷宮': 'Laberinto',
+    '精生': 'Ser',
+    '水獣': 'Bestia Marina',
+    '空獣': 'Bestia Aérea',
+    '地獣': 'Bestia Terrenal',
+    '龍獣': 'Bestia Dragón',
+    '凶蟲': 'Insecto del Infortunio',
+    '精元': 'Origen',
+    'トリック': 'Truco',
+    '英知': 'Sabiduría',
+    '微菌': 'Bacteria',
+    '怪異': 'Aparición',
+  },
+  DOM: {
+    'index': {
+      // 'link-support-webxoss': {
+      //  textContent: 'WEBXOSS NECESITA TU AYUDA!',
+      //  href: 'about_en.html#support'
+      // },
+      'link-version': '<-->',
+      'label-nickname': 'Nickname:',
+      'input-nickame': {
+        placeholder: 'nickname'
+      },
+      'link-edit-deck': 'EditarMazo',
+      'label-bgm': 'BGM',
+      'label-sound-effect': 'SFX',
+      'label-room-list': 'Lista de Salas:',
+      'span-play-replay': 'Mirar Repetición',
+      'label-create-room-password': 'Contraseña:',
+      'label-mayus-room': 'Cuarto de Mayu',
+      'label-create-room': 'Crear Sala:',
+      'input-room-name': {
+        placeholder: 'nombre de sala'
+      },
+      'button-create-room': 'crear',
+      'link-about': {
+        textContent: 'Sobre',
+        href: 'about_en.html'
+      },
+      'link-service': {
+        textContent: 'Terminos',
+        href: 'service_en.html'
+      },
+      'link-disclaimer': {
+        textContent: 'Disclaimer',
+        href: 'service_en.html#disclaimer'
+      },
+      'link-supporters': {
+        textContent: 'Supporters',
+        href: 'supporters_en.html'
+      },
+      'span-leave-room': '<<Regresar',
+      'label-live': 'EN VIVO',
+      // 'label-room': 'Sala:',
+      // 'label-host': 'Anfitrión:',
+      // 'label-guest': 'Invitado:',
+      'label-ready': 'Listo',
+      // 'label-deck': 'Mazo:',
+      'button-replay-step': 'SIGUIENTE',
+      'button-replay-auto': 'AUTO',
+      'button-replay-save': 'DESCARGAR',
+      'span-surrender': 'Rendirse',
+      'span-leave-game': 'Irse',
+      'chat-input': {
+        placeholder: 'Chatea aquí...'
+      },
+      'label-replay-list': 'Lista de Repeticiones:',
+      'label-replay-file': 'Archivo de Repetición:',
+      'button-replay-return': 'Regresar',
+      'reconnect-title': '¡Estas desconectado!',
+      'reconnect-retry': 'Reconectando...',
+      'wait-for-reconnect-title': '¡Tu oponente esta desconectado!',
+      'wait-for-reconnect-retry': 'Esperando por reconexión...',
+      'wait-for-reconnect-button-drop': 'Abandonar',
+      'span-set-proxy': 'Establecer Proxy',
+      'proxy-title': 'Proxy',
+      'proxy-description': 'Si tu conexión al servidor de WEBXOSS no es estable, puedes probar con un proxy.',
+      'proxy-noproxy': 'Sin Proxy (Tokyo)',
+      'proxy-cloudflare': 'CloudFlare',
+      'proxy-provide': 'Provee un servidor...',
+      'proxy-button-ok': 'OK',
+      'msgbox-button-ok': 'OK',
+      'msgbox-button-cancel': 'Cancelar'
+    },
+    'DeckEditor': {
+      'link-back-to-webxoss': 'Hecho',
+      'label-select-deck': 'Seleccionar mazo:',
+      'button-delete-deck': 'Borrar',
+      'button-rename': 'Renombrar',
+      'label-new-deck': 'Nuevo mazo:',
+      'input-new-deck-name': {
+        placeholder: 'nombre del mazo',
+      },
+      'button-new-deck': 'Agregar',
+      'button-copy-deck': 'Duplicar',
+      'button-import-export': 'Importar/Exportar',
+      'main-deck-title': 'Mazo Principal',
+      'main-deck-mayus-room': 'Cuarto de Mayu',
+      'main-deck-burst-title': 'Burst: ',
+      'lrig-deck-title': 'Mazo LRIG',
+      'label-import-from-file': 'Importar archivo:',
+      'label-export-to-file': 'Exportar archivo:',
+      'button-export': 'Exportar',
+      'button-text': 'Mostrar texto',
+      'button-export-code': 'Mostrar código',
+      'button-import-code': 'Importar código',
+      'button-import-export-cancel': 'Cancelar',
+      'search-input': {
+        placeholder: 'Busca aqui...'
+      },
+      'link-search-tips': {
+        textContent: 'Sugerencias de busqueda',
+        href: 'SearchTips_en.html'
+      },
+      'search-show-more': 'Mostrar mas'
+    }
+  },
+  'index': {
+    'REQUIRE_UPDATE': '¡Una nueva versión es requerida!\n¡Para iniciar un juego, debes actualizar el cliente!',
+    'UPDATING': 'Actualizando...',
+    'UPDATE_READY': '¡Actualizado, click aqui para aplicar!',
+    'NET_WORK_ERROR': 'Error de red.',
+    'DISCONNECTED': 'Desconectado',
+    'NO_VALID_DECK': '¡Mazo invalido!\n¡Por favor edita tu mazo!',
+    'OPPONENT_DISCONNECTED': '¡Tu oponente esta desconectado!',
+    'SELF_DISCONNECTED': '¡El jugador esta desconectado!',
+    'PLEASE_INPUT_A_NICKNAME': '¡Por favor ingrese un nickname!',
+    'PLEASE_INPUT_A_ROOM_NAME': '¡Por favor ingrese un nombre de sala!',
+    'FAILED_TO_READ_DECK': '¡Fallo al leer mazo!',
+    'NEW_GUEST': '%s se une a la sala.',
+    'GUEST_LEFT': '%s abandona la sala.',
+    'READY': 'Listo para \'open\'!',
+    'UNREADY': 'Aun no listo',
+    'INPUT_PASSWORD': 'Ingresa la contraseña',
+    'WRONG_PASSWORD': '¡Contraseña incorrecta!',
+    'NOT_CONNECTED': '¡Aun no conectado al servidor!\n¡Por favor reintente más tarde!',
+    'SUPPORT_URL': 'about_en.html#support',
+    'CONFIRM_SURRENDER': '¿Estás seguro que te rindes?',
+    'SURRENDERED': '¡Te has rendido!',
+    'OPPONENT_SURRENDERED': '¡Tu oponente se ha rendido!',
+    'CONFIRM_CLOSE': '¿Estás seguro que te vas?',
+    'DROPPED': 'Has sido abandonado.',
+    'SAVE_REPLAY': 'Guardar repetición',
+    'FAILED_TO_PARSE_REPLAY': '¡Fallo al leer archivo de repetición!',
+    'UNSUPPORTED_REPLAY_VERSION': '¡Versión de repetición no soportada!\n¡Por favor actualice su cliente!',
+    'PROVIDE_PROXY_SERVER': '¿Te gustaría proveernos un servidor proxy?\n¡Por favor contáctanos en webxoss@gmail.com !\n¡WEBXOSS será más increíble con tu ayuda!',
+    'FETCHING_DATA': 'Recopilando data...\nHaz click en \"OK\" para cancelar.',
+    'FAILED_TO_FETCH_DATA': 'Fallo al recopilar la data!'
+  },
+  'editor': {
+    'PLEASE_INPUT_A_DECK_NAME': '¡Por favor ingrese un nombre de mazo!',
+    'DECK_NAME': 'Nombre de mazo:',
+    'DECK_NAME_ALREADY_EXISTS': '¡Mazo "%s" ya existe!',
+    'FAILED_TO_PARSE_FILE': '¡Fallo al leer archivo!',
+    'FAILED_TO_PARSE_CODE': '¡Fallo al leer código!',
+    'CONFIRM_DELETE_DECK': '¿Seguro que deseas borrar "%s"?'
+  }
+};
+
 var map_zh_TW = Object.create(map_zh_CN);
 map_zh_TW.traditional = true;
 
@@ -2461,6 +2852,10 @@ Localize.setLanguage = function (lang) {
 	} else if (lang === 'it') {
 		Localize.map = map_it;
 		CardInfo = CardInfo_it;
+		localStorage.setItem('language',lang);
+	} else if (lang === 'sp') {
+		Localize.map = map_sp;
+		CardInfo = CardInfo_sp;
 		localStorage.setItem('language',lang);
 	} else {
 		debugger;

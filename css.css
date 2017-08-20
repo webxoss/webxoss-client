@@ -556,13 +556,13 @@ body[self] #detail {
 	-ms-transform-origin: 548px;
 	-o-transform-origin: 548px;
 	background-repeat: no-repeat;
-	background-image: url('background/Grid.jpg');
+	background-image: url('background/Grid.png');
 }
 #background-self-grid {
 	top: 367px;
 	width: 836px;
 	background-repeat: no-repeat;
-	background-image: url('background/Grid.jpg');
+	background-image: url('background/Grid.png');
 }
 
 body[self=white] #background-self,

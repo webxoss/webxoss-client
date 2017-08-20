@@ -65,7 +65,7 @@ if (window.applicationCache) {
 }
 
 
-var VERSION = 68;
+var VERSION = 69;
 var serverVersion;
 var clientId = 0;
 var game = null;
@@ -993,7 +993,7 @@ function readAndPlayReplayFile () {
 	});
 }
 function playReplayContent (content) {
-	if (content.clientVersion > VERSION) {
+	if ((content.clientVersion > VERSION) || (content.clientVersion < 69)) {
 		msgBox.alert(Localize.index('UNSUPPORTED_REPLAY_VERSION'),initHall);
 		return;
 	}

@@ -1,34 +1,40 @@
 ﻿Cards:
-	Newly Added: WX15.
-	Pre-built Deck: WD01~WD18
-	Booster Packs: WX01~WX15
-	PR Cards:
-		001-120
-		123-148
-		150-155
-		157
-		166
-		168-171
-		173-183
-		185-187
-		195
-		201-202
-		204-208
-		210-222
-		224
-		232-233
-		237-238
-		240-266
-		268-295
-		297-310
-		312-327
-		330-332
-		340-347
-		350-353
-	SP Cards: SP01~SP03, SP06~SP07, SP10, SP17~SP20
-	Total: 2101 cards
+  Newly Added: WD19, WD20, WX16, SP21~24.
+  Pre-built Deck: WD01~WD20
+  Booster Packs: WX01~WX16
+  PR Cards:
+    001-120
+    123-148
+    150-155
+    157
+    166
+    168-171
+    173-183
+    185-187
+    195
+    201-202
+    204-208
+    210-222
+    224
+    232-233
+    237-238
+    240-266
+    268-295
+    297-310
+    312-328
+    330-354
+    356-369
+    371-376
+  SP Cards: SP01~SP03, SP06~SP07, SP10, SP17~SP24
+  Total: 2301 cards
 
 Versions:
+<復活> (2017-08-20)
+  + Add cards: WD19, WD20, WX16, SP21~24.
+  + New language support: Korean.
+    Translated by alpiste§ and LeanInfinity from Wixoss TCG en Español.
+    Thank you!
+
 <火竜点睛> (2017-05-10)
   + Add cards: WX15 cards.
 
@@ -58,163 +64,163 @@ Versions:
   + Add cards: WD15, WD16 and PR cards before WX13.
 
 <红莲乙女 游月·肆> (2016-06-30)
-	+ Add cards: WX12.
+  + Add cards: WX12.
 
 <真名之巫女 茧> (2016-05-31)
-	+ Add cards: WD13 & WD14.
-	+ Network latency is shown.
-	+ Mayu's room can be disabled.
+  + Add cards: WD13 & WD14.
+  + Network latency is shown.
+  + Mayu's room can be disabled.
 
 <因果报应> (2016-04-11)
-	Add cards: WX11.
+  Add cards: WX11.
 
 <贰游 套娃> (2016-03-07)
-	+ New language supported: Russian.
-	Translated by Orenji_Reiji from cardfight.ru!
-	Thank you!
+  + New language supported: Russian.
+  Translated by Orenji_Reiji from cardfight.ru!
+  Thank you!
 
 <龙灭连锁> (2016-02-07)
-	Add cards: WX10.
+  Add cards: WX10.
 
 <艾娅伊★黑桃> (2016-01-19)
-	+ Add cards: WD12.
-	+ New Feature: Live mode.
+  + Add cards: WD12.
+  + New Feature: Live mode.
 
 <保湿成分> (2016-01-17)
-	+ Add cards: part of PR cards. (selectors pack vol7)
-	 (212~222,232,237)
-	+ Improved replay mode.
-	 Now, you can watch last 20 replays on the server.
+  + Add cards: part of PR cards. (selectors pack vol7)
+   (212~222,232,237)
+  + Improved replay mode.
+   Now, you can watch last 20 replays on the server.
 
 <开启的极门 乌特乌尔斯> (2016-01-09)
-	Add cards: WX09.
+  Add cards: WX09.
 
 <弧光·毁灭> (2015-12-29)
-	Add cards: PR cards before WX09.
-	(195,201,202,204,207,208,210,224,233)
+  Add cards: PR cards before WX09.
+  (195,201,202,204,207,208,210,224,233)
 
 <BEAUTIFUL> (2015-09-10)
-	Add cards: WX08.
+  Add cards: WX08.
 
 <七夕> (2015-08-18)
-	Add cards: part of PR Cards. (selectors pack vol6)
+  Add cards: part of PR Cards. (selectors pack vol6)
 
 <四面楚火> (2015-08-09)
-	Add cards: SP10.
+  Add cards: SP10.
 
 <缪=孵化> (2015-08-05)
-	Add cards: WD11.
+  Add cards: WD11.
 
 <台风一过> (2015-07-31)
-	Add cards: WX07.
+  Add cards: WX07.
 
 <未来永业> (2015-07-27)
-	Add cards: WD10.
+  Add cards: WD10.
 
 <悠久的使者 莎榭・普兰> (2015-07-23)
-	Add cards: WD09.
+  Add cards: WD09.
 
 <天佑神助> (2015-07-23)
-	Add cards: SP07.
+  Add cards: SP07.
 
 <回想的祝福> (2015-07-21)
-	New feature: Replay mode.
+  New feature: Replay mode.
 
 <拷问之鞭> (2015-07-19)
-	Add cards: part of PR Cards. (selectors pack vol5)
+  Add cards: part of PR Cards. (selectors pack vol5)
 
 <混沌之键主 乌姆尔=FYRA> (2015-07-15)
-	Add cards: WD08.
+  Add cards: WD08.
 
 <化学反应> (2015-07-15)
-	Add cards: SP06.
+  Add cards: SP06.
 
 <TRICK OR TREAT> (2015-07-12)
-	Add cards: WX06 blue part.
+  Add cards: WX06 blue part.
 
 <云消雾散> (2015-07-09)
-	Add cards: WX06 green part.
+  Add cards: WX06 green part.
 
 <创造之键主 乌姆尔=FEM> (2015-06-20)
-	Add cards: WX06 black part.
+  Add cards: WX06 black part.
 
 <火福纠绳> (2015-06-17)
-	Add cards: WX06 red part.
+  Add cards: WX06 red part.
 
 <太古永生者 塔维尔=NOLL> (2015-06-16)
-	Add cards: WX06 white part.
+  Add cards: WX06 white part.
 
 <墓地肠线> (2015-06-14)
-	Add cards: SP03.
+  Add cards: SP03.
 
 <彩虹艺术> (2015-06-13)
-	Add cards: part of PR Cards. (小忆5,彩虹,5蛋兑换pr,情人节等)
+  Add cards: part of PR Cards. (小忆5,彩虹,5蛋兑换pr,情人节等)
 
 <窥视分析> (2015-06-08)
-	New feature: Spectator Mode.
+  New feature: Spectator Mode.
 
 <创世之巫女 茧> (2015-05-28)
-	Add cards: WX05 Mayu part.
+  Add cards: WX05 Mayu part.
 
 <虚无阎魔 乌莉丝> (2015-05-19)
-	Add cards: WX05 Urith part.
+  Add cards: WX05 Urith part.
 
 <黑点之巫女 玉依姬> (2015-05-17)
-	Add cards: WX05 Tama part.
+  Add cards: WX05 Tama part.
 
 <雨天> (2015-05-15)
-	Add cards: WX05 blue part.
+  Add cards: WX05 blue part.
 
 <偶像防御> (2015-05-14)
-	Add cards: PR057,PR100.
+  Add cards: PR057,PR100.
 
 <十人十色> (2015-05-13)
-	Add cards: WX05 green part.
+  Add cards: WX05 green part.
 
 <一烛即发> (2015-05-12)
-	Add cards: WX05 red part.
+  Add cards: WX05 red part.
 
 <炎志贯彻> (2015-05-04)
-	Add cards: SP01,SP02.
+  Add cards: SP01,SP02.
 
 <幻兽 喵> (2015-05-03)
-	Add cards: part of PR Cards. (斑彩石,lock you,喵等)
+  Add cards: part of PR Cards. (斑彩石,lock you,喵等)
 
 <烈情割裂> (2015-04-30)
-	Add cards: part of PR Cards. (惊叹,割裂,小忆等)
+  Add cards: part of PR Cards. (惊叹,割裂,小忆等)
 
 <未来福音>
-	New features: BGM and sound effect.
+  New features: BGM and sound effect.
 
 <究极/少女 伊绪奈>
-	Add cards: WX04 Iona and Urith parts.
+  Add cards: WX04 Iona and Urith parts.
 
 <米璐璐恩·节>
-	Add cards: WX04 Mirurun part.
+  Add cards: WX04 Mirurun part.
 
 <PRECIOUS>
-	Add cards: WX04 Piruluk part.
+  Add cards: WX04 Piruluk part.
 
 <再诞>
-	Add cards: WX04 green part.
+  Add cards: WX04 green part.
 
 <卷火重来>
-	Add cards: WX04 Yuzuki part.
+  Add cards: WX04 Yuzuki part.
 
 <抵达大门>
-	Add cards: WX04 Tama part.
+  Add cards: WX04 Tama part.
 
 <黑色危机>
-	Add cards: WD07.
+  Add cards: WD07.
 
 <奇奇怪怪>
-	New feature: Multi-language support.
+  New feature: Multi-language support.
 
 <惊喜与我同在>
-	Add cards: WD06.
+  Add cards: WD06.
 
 <将之开启>
-	New feature: Chatting system.
+  New feature: Chatting system.
 
 <火红柳绿>
-	New feature: Battling background.
+  New feature: Battling background.

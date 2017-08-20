@@ -31,7 +31,7 @@
 Versions:
 <復活> (2017-08-20)
   + Add cards: WD19, WD20, WX16, SP21~24.
-  + New language support: Korean.
+  + New language support: Spanish.
     Translated by alpiste§ and LeanInfinity from Wixoss TCG en Español.
     Thank you!
 

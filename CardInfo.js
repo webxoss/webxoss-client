@@ -62879,7 +62879,7 @@ var CardInfo = {
     "costRed": 0,
     "costBlue": 0,
     "costGreen": 6,
-    "costColorless": 1,
+    "costColorless": 12,
     "guardFlag": false,
     "multiEner": false
   },

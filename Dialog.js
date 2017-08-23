@@ -431,7 +431,7 @@ Dialog.prototype.selectEner = function (title,cards,integers,cost,callback,onCan
 			count: requirement.count,
 			mask: requirement.mask,
 			filter: function (int) {
-				return !int || (int & requirement.mask);
+				return !requirement.mask || (int & requirement.mask);
 			},
 		};
 	});

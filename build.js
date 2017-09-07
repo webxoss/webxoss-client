@@ -9,6 +9,7 @@ const map = {
   ],
   'webxoss.js': [
     './lib/util.js',
+    './lib/bugfix.js',
     'MessageBox.js',
     'IO.js',
     'Card.js',
